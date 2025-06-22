@@ -1,4 +1,4 @@
-<template>
+    <template>
   <section>
     <div class="bg-[#141414]">
         <div class="container px-4 py-12 mx-auto">

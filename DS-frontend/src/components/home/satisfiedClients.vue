@@ -3,26 +3,34 @@
     <div class="bg-[#141414] py-24">
       <div class="container mx-auto px-4">
 
-        <h1 class="text-center overflow-hidden sm:text-3xl/snug md:text-6xl/snug font-light">
-          <span class="text-transparent bg-[url('https://images.pexels.com/photos/7135008/pexels-photo-7135008.jpeg')] bg-cover bg-left bg-clip-text">Our </span>
-          <span class="text-animate text-amber-50" >Satisfied </span> 
-          <span class="text-transparent bg-[url('https://images.pexels.com/photos/7135008/pexels-photo-7135008.jpeg')] bg-cover bg-right bg-clip-text">
-            Clients
-          </span>
-        </h1> 
+        <AnimatedTitle 
+          firstPart = "Our"
+          middlePart = "Satisfied"
+          lastPart = "Clients"
+        />
 
-        <div class="logoMove overflow-hidden">
-          <div class="marquee-track flex gap-10 py-18 whitespace-nowrap">
+        <div class="logoMove relative overflow-hidden">
+          <div 
+          class="marquee-track flex gap-10 py-18 whitespace-nowrap"
+          >
 
             <div
               v-for="(clientData, index) in clientDatas"
               :key="index"
-              class="shrink-0 ml-4 "
+              class="shrink-0 ml-4 my-auto"
             >
-              <img :src="clientData.logo" alt="logo" class="h-14 mx-auto" />
+              <img :src="clientData.logo" alt="logo" class="w-[96px] mx-auto" />
             </div>  
 
           </div>
+
+          <!-- left right gradient shadow effect  respectively        -->
+          
+          <div class="absolute top-0 left-0 h-full w-34 z-10 pointer-events-none bg-gradient-to-r from-[#141414] to-transparent"></div>
+          <div class="absolute top-0 right-0 h-full w-34 z-10 pointer-events-none bg-gradient-to-l from-[#141414] to-transparent"></div>
+          
+          <!-- left right gradient shadow effect  respectively  ends      -->
+
         </div>
 
       </div>
@@ -32,90 +40,156 @@
 
 <script setup>
 
-    import { ref, onMounted } from "vue";
+  import { ref, onMounted } from "vue";
 
-    import { gsap } from "gsap";
+  import { gsap } from "gsap";
 
-    import DatascapeLogo from "@/assets/satisfiedClients/datascape.png";
-    import BracLogo from "@/assets/satisfiedClients/brac.png";
-    import UnicefLogo from "@/assets/satisfiedClients/unicef.png";
+  import AshInteriorLogo from "@/assets/satisfiedClients/ash-interior.png";
+  import BracLogo from "@/assets/satisfiedClients/brac.png";
+  import ChrfLogo from "@/assets/satisfiedClients/csrf.png";
+  import DatascapeLogo from "@/assets/satisfiedClients/datascape.png";
+  import EmbassyBDLogo from "@/assets/satisfiedClients/embassy-bangladesh.png";
+  import HotelKollolLogo from "@/assets/satisfiedClients/hotel-kollol.png";
+  import IbnatairLogo from "@/assets/satisfiedClients/ibnatair.png";
+  import IFRCLogo from "@/assets/satisfiedClients/ifrc.png";
+  import ITCLogo from "@/assets/satisfiedClients/itc.png";
+  import JuvenileSchoolLogo from "@/assets/satisfiedClients/juvenile-school.png"
+  import MernetLogo from "@/assets/satisfiedClients/mernet.png";
+  import OrchidSchoolLogo from "@/assets/satisfiedClients/orchid-school.png";
+  import OspreyLogo from "@/assets/satisfiedClients/osprey.png";
+  import priyoHolidaysLogo from "@/assets/satisfiedClients/priyoholidays.png"
+  import SpaceSweaterLogo from "@/assets/satisfiedClients/space-sweater.png";
+  import StarlitSchoolLogo from "@/assets/satisfiedClients/starlit-school.png"
+  import TextTechLogo from "@/assets/satisfiedClients/textech.png";
+  import TravelersHolidayLogo from "@/assets/satisfiedClients/travelers-holiday.png";
+  import UmclLogo from "@/assets/satisfiedClients/umcl.png";
+  import UnicefLogo from "@/assets/satisfiedClients/unicef.png";
+  import VrcLogo from "@/assets/satisfiedClients/vrc.png"
+  
+  import AnimatedTitle from "../headings/animatedTitle.vue";
 
-    const sliderClientDatas = ref([
-        
-        {
-          name: "Unicef",
-          logo: UnicefLogo,
-        },
-        {
-          name: "Unicef",
-          logo: DatascapeLogo,
-        },
-        {
-          name: "Unicef",
-          logo: BracLogo,
-        },
-      
-      ])
-
-    const clientDatas = ref([
-      ...sliderClientDatas.value,
-      ...sliderClientDatas.value,
-      ...sliderClientDatas.value,
-      ...sliderClientDatas.value,
-      ...sliderClientDatas.value,
-      ...sliderClientDatas.value,
-      ...sliderClientDatas.value, 
-    ])
-    // console.log(clientDatas.value);
-    console.log(sliderClientDatas.value);
-
+  const sliderClientDatas = ref([
     
-    onMounted(()=> {
+    {
+      name:"Child Health Research Foundation",
+      logo: ChrfLogo,
+    },
+    {
+      name:"Textech Solutions",
+      logo: TextTechLogo,
+    },
+    {
+      name:"Uttara Model Club Limited",
+      logo: UmclLogo,
+    },
+    {
+      name:"International Travel Corporation",
+      logo: ITCLogo,
+    },
+    {
+      name:"Space Sweater Limited",
+      logo: SpaceSweaterLogo,
+    },
+    {
+      name:"Osprey Education Canada Inc",
+      logo: OspreyLogo,
+    },
+    {
+      name:"Ibnat Air International Tour & Travel",
+      logo: IbnatairLogo,
+    },
+    {
+      name:"Priyo Holidays Limited",
+      logo: priyoHolidaysLogo,
+    },
+    {
+      name:"VRC Study Abroad Limited",
+      logo: VrcLogo,
+    },
+    {
+      name:"Embassy Bangladesh Immigration",
+      logo: EmbassyBDLogo,
+    },
+    {
+      name:"Starlit School of English",
+      logo: StarlitSchoolLogo,
+    },
+    {
+      name:"Juvenile English Medium School",
+      logo: JuvenileSchoolLogo,
+    },
+    {
+      name:"Hotel Kollol - j & Z Group",
+      logo: HotelKollolLogo,
+    },
+    {
+      name:"Orchid International School Dhaka",
+      logo: OrchidSchoolLogo,
+    },
+    {
+      name:"ASH Interior",
+      logo: AshInteriorLogo,
+    },
+    {
+      name:"Traveler's Holidays Ltd.",
+      logo: TravelersHolidayLogo,
+    },
+    {
+      name:"Datascape Reasearch & Consultancy Ltd.",
+      logo: DatascapeLogo,
+    },
+    {
+      name:"Mernet Monitoring Evaluation",
+      logo: MernetLogo,
+    },
+    {
+      name:"Unicef",
+      logo: UnicefLogo,
+    },
+    {
+      name:"Brac",
+      logo: BracLogo,
+    },
+    {
+      name:"IFRC",
+      logo: IFRCLogo,
+    },
+  
+  ])
 
-      // animation for heading
-
-      const bloom = document.querySelector(".text-animate");
-      const bloomText = bloom.textContent;
-      const splittedText = bloomText.split("");
-
-      let clutter = "";
-
-      splittedText.forEach((e)=> {
-        clutter += `<span class="inline-block">${e}</span>`;
-      })
-
-      bloom.innerHTML = clutter;
-      gsap.registerPlugin()
-
-      gsap.from(".text-animate span", {
-        y:100,
-        opacity:0,
-        delay: 0.3,
-        duration:0.8,
-        stagger: {
-          from: "center",
-          amount: -0.4,
-        },
-        scrollTrigger:".text-animate"
-      })
-
-      // animation for heading ends 
+  const clientDatas = ref([
+    ...sliderClientDatas.value,
+    ...sliderClientDatas.value,
+  ])
     
-      
-      //animation for infinite slider
-      
-      let tl = gsap.timeline({ repeat: -1, defaults: { ease: "linear" } });
+  onMounted(()=> {
 
-      tl.to(".marquee-track", {
-        xPercent: -50,
-        duration: 15,
-      });
+    //animation for slider content
 
-      window.addEventListener("wheel", (e) => {
-        const direction = e.deltaY > 0 ? 1 : -1;
-        tl.timeScale(direction);
-      });
-      
-    })
+    window.onload = ()=> {
+
+      const sliderWidth = document.querySelector(".marquee-track");
+      const scrollWidth = sliderWidth.scrollWidth; // total width of all items
+      const visibleWidth = sliderWidth.offsetWidth; // visible width of the container
+      const distance = scrollWidth - visibleWidth; // how much it needs to move left
+      const speed = 60; // pixels per second
+      const duration = distance / speed;
+  
+      gsap.to(".marquee-track", { 
+        x: -distance,
+        duration:duration,
+        repeat: -1,
+        ease: "none",
+      }) 
+  
+      const MAX_CLIENTS = 50;
+  
+      if (clientDatas.value.length < MAX_CLIENTS) {
+        clientDatas.value = [...clientDatas.value, ...sliderClientDatas.value];
+      }
+
+    }
+
+  })
 
 </script>
