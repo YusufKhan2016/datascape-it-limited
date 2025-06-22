@@ -33,7 +33,7 @@
   <!-- about us image section   -->
             <div class="image-box w-full h-auto bg-white translate-y-[50%] overflow-hidden flex items-center justify-center rounded-4xl">
 
-              <img src="https://images.pexels.com/photos/9586529/pexels-photo-9586529.jpeg" class="animated-about-img transform w-full" alt="">
+              <img src="@/assets/about/datascape-family.jpg" class="animated-about-img transform w-full" alt="">
 
             </div>
 
