@@ -1,42 +1,42 @@
 <template>
   <section>
     <div class="bg-[#141414]">
-        <div class="container px-4 py-12 mx-auto">
+        <div class="container px-4 py-14 mx-auto">
 
   <!-- about us description  -->
 
-            <div class="p-18">
-                <AnimatedTitle
-                  firstPart = "A Glimpse of"
-                  middlePart = "DatascapeIT"
-                  bgImgUrl = "https://images.pexels.com/photos/7130491/pexels-photo-7130491.jpeg"
-                />
-            </div>
+          <div class="p-18">
+              <AnimatedTitle
+                firstPart = "A Glimpse of"
+                middlePart = "DatascapeIT"
+                bgImgUrl = "https://images.pexels.com/photos/7130491/pexels-photo-7130491.jpeg"
+              />
+          </div>
 
-            <div class="about-us-desc text-gray-200 text-xl/9 py-10"
-            >
+          <div class="about-us-desc text-gray-200 text-xl/9 py-10"
+          >
 
-              Initiating profound changes with thorough understanding and profound insight.
+            Initiating profound changes with thorough understanding and profound insight.
 
-              <br>
-              <br>
+            <br>
+            <br>
 
-              Datascape IT Limited, a subsidiary of the esteemed Datascape Group, is a distinguished private limited company headquartered in Dhaka, Bangladesh. As a premier digital marketing agency, we specialize in crafting bespoke solutions tailored to the unique needs of entrepreneurs, startups, and organizations. Our comprehensive suite of services includes Branding, Web Designing, Social Media Marketing, and Search Engine Optimization, all aimed at unleashing the digital potential of our clients.
-              
-              <br>
-              <br>
+            Datascape IT Limited, a subsidiary of the esteemed Datascape Group, is a distinguished private limited company headquartered in Dhaka, Bangladesh. As a premier digital marketing agency, we specialize in crafting bespoke solutions tailored to the unique needs of entrepreneurs, startups, and organizations. Our comprehensive suite of services includes Branding, Web Designing, Social Media Marketing, and Search Engine Optimization, all aimed at unleashing the digital potential of our clients.
+            
+            <br>
+            <br>
 
-              At Datascape IT, we pride ourselves on our smart approach to digital growth, breaking down complex processes into easily understandable steps for our clients. Our team of seasoned professionals combines creativity with analytical acumen, ensuring every project reflects our unwavering commitment to excellence and brand integrity. We guarantee the highest standards of quality and creativity in all endeavors, promising to elevate your brand's online presence and foster long-term success. Through transparent communication and ongoing education, we forge meaningful partnerships with our clients, empowering them to navigate the digital landscape with confidence. Let us guide you towards building a resilient, thriving brand that stands out amidst competition and endures the test of time.
+            At Datascape IT, we pride ourselves on our smart approach to digital growth, breaking down complex processes into easily understandable steps for our clients. Our team of seasoned professionals combines creativity with analytical acumen, ensuring every project reflects our unwavering commitment to excellence and brand integrity. We guarantee the highest standards of quality and creativity in all endeavors, promising to elevate your brand's online presence and foster long-term success. Through transparent communication and ongoing education, we forge meaningful partnerships with our clients, empowering them to navigate the digital landscape with confidence. Let us guide you towards building a resilient, thriving brand that stands out amidst competition and endures the test of time.
 
-            </div>
+          </div>
 
-  <!-- about us image section   -->
+<!-- about us image section   -->
 
-            <div class="image-box w-9/10 h-auto bg-white translate-y-[20%] scale-85 overflow-hidden flex items-center justify-center mx-auto rounded-4xl">
+          <div class="image-box w-9/10 h-auto bg-white translate-y-[20%] scale-85 overflow-hidden flex items-center justify-center mx-auto rounded-4xl">
 
-              <img src="@/assets/about/datascape-family.jpg" class="animated-about-img transform w-full" alt="">
+            <img src="@/assets/about/datascape-family.jpg" class="animated-about-img transform w-full" alt="">
 
-            </div>
+          </div>
 
 
         </div>
@@ -86,7 +86,7 @@
           start: "top 95%",
           end: "top 50%",
           scrub: 2,
-          markers: true,
+          markers:false,
         },
       });
 

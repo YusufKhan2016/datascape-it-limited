@@ -3,7 +3,7 @@
   <section>
     <!-- bg color: #141414  -->
     <div class="w-full bg-[#141414]">
-      <div class="bannerSliderScroll w-[900px]  overflow-hidden container px-2 sm:px-5 relative left-1/2 -translate-x-1/2" >
+      <div class="bannerSliderScroll w-full overflow-hidden container px-2 sm:px-5 relative left-1/2 -translate-x-1/2" >
           <div class="rounded-[50px] border border-solid border-green-600 overflow-hidden ">
     
             <Swiper 
@@ -74,9 +74,9 @@
     bannerSliderClass.value = ".bannerSliderScroll"
     gsap.registerPlugin(ScrollTrigger);
 
-    gsap.to(bannerSliderClass.value,{
-      width:"100%",
-      ease: 'power3.out',
+    gsap.from(bannerSliderClass.value,{
+      scale: 0.80,
+      ease: 'power3.inOut',
       scrollTrigger: {
         trigger: ".bannerSliderScroll",
         markers:false,

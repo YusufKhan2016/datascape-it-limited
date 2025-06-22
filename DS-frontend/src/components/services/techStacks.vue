@@ -1,7 +1,7 @@
 <template>
   <section> 
     <div class="bg-[#141414]">
-      <div class="container mx-auto px-4">
+      <div class="container mx-auto px-4 py-14">
 
         <div class="p-18">
 

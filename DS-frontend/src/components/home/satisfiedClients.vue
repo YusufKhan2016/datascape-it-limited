@@ -1,8 +1,8 @@
 <template>
   <section>
-    <div class="bg-[#141414] py-24">
-      <div class="container mx-auto px-4">
-
+    <div class="bg-[#141414]">
+      <div class="container mx-auto py-14 px-4">
+ 
         <AnimatedTitle 
           firstPart = "Our"
           middlePart = "Satisfied"
@@ -40,7 +40,7 @@
 
 <script setup>
 
-  import { ref, onMounted } from "vue";
+  import { ref, onMounted, nextTick } from "vue";
 
   import { gsap } from "gsap";
 
@@ -162,34 +162,41 @@
     ...sliderClientDatas.value,
   ])
     
-  onMounted(()=> {
+  onMounted(async () => {
+    await nextTick();
 
-    //animation for slider content
+    const marquee = document.querySelector(".marquee-track");
+    const images = marquee.querySelectorAll("img");
 
-    window.onload = ()=> {
+    // Wait for all logos to load
+    await Promise.all(
+      Array.from(images).map((img) => {
+        return img.complete
+          ? Promise.resolve()
+          : new Promise((resolve) => {
+              img.onload = img.onerror = resolve;
+            });
+      })
+    );
 
-      const sliderWidth = document.querySelector(".marquee-track");
-      const scrollWidth = sliderWidth.scrollWidth; // total width of all items
-      const visibleWidth = sliderWidth.offsetWidth; // visible width of the container
-      const distance = scrollWidth - visibleWidth; // how much it needs to move left
-      const speed = 60; // pixels per second
-      const duration = distance / speed;
-  
-      gsap.to(".marquee-track", { 
-        x: -distance,
-        duration:duration,
-        repeat: -1,
-        ease: "none",
-      }) 
-  
-      const MAX_CLIENTS = 50;
-  
-      if (clientDatas.value.length < MAX_CLIENTS) {
-        clientDatas.value = [...clientDatas.value, ...sliderClientDatas.value];
-      }
+    const scrollWidth = marquee.scrollWidth;
+    const visibleWidth = marquee.offsetWidth;
+    const distance = scrollWidth - visibleWidth;
+    const speed = 60; // pixels per second
+    const duration = distance / speed;
 
+    gsap.to(marquee, {
+      x: -distance,
+      duration: duration,
+      repeat: -1,
+      ease: "none",
+    });
+
+    const MAX_CLIENTS = 50;
+    if (clientDatas.value.length < MAX_CLIENTS) {
+      clientDatas.value = [...clientDatas.value, ...sliderClientDatas.value];
     }
+  });
 
-  })
 
 </script>

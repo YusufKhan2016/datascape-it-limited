@@ -1,9 +1,9 @@
     <template>
   <section>
     <div class="bg-[#141414]">
-        <div class="container px-4 py-12 mx-auto">
+        <div class="container px-4 pt-24 mx-auto">
 
-            <div class="p-18">
+            <div class="px-18 py-14">
 
                 <BaseTitle>Our Services</BaseTitle>
                 <BaseSubtitle>Get the top notch IT services for your business.</BaseSubtitle>
