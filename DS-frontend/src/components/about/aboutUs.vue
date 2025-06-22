@@ -13,7 +13,7 @@
                 />
             </div>
 
-            <div class="about-us-desc text-gray-200 text-2xl py-5"
+            <div class="about-us-desc text-gray-200 text-2xl py-10"
             >
 
               Initiating profound changes with thorough understanding and profound insight.
@@ -31,7 +31,8 @@
             </div>
 
   <!-- about us image section   -->
-            <div class="image-box w-full h-auto bg-white translate-y-[50%] overflow-hidden flex items-center justify-center rounded-4xl">
+
+            <div class="image-box w-9/10 h-auto bg-white translate-y-[20%] overflow-hidden flex items-center justify-center mx-auto rounded-4xl">
 
               <img src="@/assets/about/datascape-family.jpg" class="animated-about-img transform w-full" alt="">
 
