@@ -32,7 +32,7 @@
 
   <!-- about us image section   -->
 
-            <div class="image-box w-9/10 h-auto bg-white translate-y-[20%] overflow-hidden flex items-center justify-center mx-auto rounded-4xl">
+            <div class="image-box w-9/10 h-auto bg-white translate-y-[20%] scale-85 overflow-hidden flex items-center justify-center mx-auto rounded-4xl">
 
               <img src="@/assets/about/datascape-family.jpg" class="animated-about-img transform w-full" alt="">
 
@@ -61,7 +61,7 @@
     const animatedImage = document.querySelector(".animated-about-img")
     
     description.forEach((char)=> {
-      
+
       const characters = new SplitType(char, {types: 'lines'});
       
       console.log(characters)
@@ -86,12 +86,13 @@
           start: "top 95%",
           end: "top 50%",
           scrub: 2,
-          markers: false,
+          markers: true,
         },
       });
 
       tl.to(imageBox, { 
         y: 0, 
+        scale:1,
         duration: 2 
 
       });
