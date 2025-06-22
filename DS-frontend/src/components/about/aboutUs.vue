@@ -13,7 +13,7 @@
                 />
             </div>
 
-            <div class="about-us-desc text-gray-200 text-2xl py-10"
+            <div class="about-us-desc text-gray-200 text-xl/9 py-10"
             >
 
               Initiating profound changes with thorough understanding and profound insight.
@@ -61,6 +61,7 @@
     const animatedImage = document.querySelector(".animated-about-img")
     
     description.forEach((char)=> {
+      
       const characters = new SplitType(char, {types: 'lines'});
       
       console.log(characters)
@@ -72,7 +73,7 @@
         scrollTrigger: {
           trigger: char,
           start: "top 80%",
-          end: "top -40%",
+          end: "top -60%",
           scrub:1.5,
           markers:false,
         }
