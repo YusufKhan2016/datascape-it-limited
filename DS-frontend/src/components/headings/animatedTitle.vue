@@ -1,6 +1,7 @@
 <template>
   <div>
     <h1 
+    ref="heading"
     :class="`text-center overflow-hidden text-3xl sm:text-3xl/snug md:text-4xl/snug lg:text-6xl/snug font-light ${extraClass}`">
     
         <span 
@@ -10,6 +11,7 @@
             {{ firstPart }}&nbsp;
         </span>
         <span 
+        ref="middle"
         :class="`text-animate ${middleTextColor}`" > 
             {{ middlePart }}&nbsp;
         </span> 
@@ -26,14 +28,15 @@
 
 <script setup>
 
-    import { onMounted } from "vue";
+    import { onMounted, nextTick } from "vue";
 
     import gsap from "gsap";
     import { ScrollTrigger } from "gsap/all";
 
-    onMounted(() => {
+    onMounted( async() => {
 
     // animation for heading
+        await nextTick()
     
         const bloom = document.querySelector(".text-animate");
     

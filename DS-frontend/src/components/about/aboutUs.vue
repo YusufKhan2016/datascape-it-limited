@@ -13,7 +13,7 @@
               />
           </div>
 
-          <div class="about-us-desc text-gray-200 text-xl/9 py-10"
+          <div class="about-us-desc text-gray-200 text-sm/9 md:text-xl/9 py-10"
           >
 
             Initiating profound changes with thorough understanding and profound insight.
@@ -32,7 +32,7 @@
 
 <!-- about us image section   -->
 
-          <div class="image-box w-9/10 h-auto bg-white translate-y-[20%] scale-85 overflow-hidden flex items-center justify-center mx-auto rounded-4xl">
+          <div class="image-box w-9/10 h-auto bg-white overflow-hidden flex items-center justify-center mx-auto rounded-4xl">
 
             <img src="@/assets/about/datascape-family.jpg" class="animated-about-img transform w-full" alt="">
 
@@ -45,6 +45,7 @@
 </template>
 
 <script setup>
+
   import AnimatedTitle from '../headings/animatedTitle.vue';
   import SplitType from 'split-type'
 
@@ -54,8 +55,8 @@
   import { ScrollTrigger } from 'gsap/all';
 
   gsap.registerPlugin(ScrollTrigger)
-  
-  onMounted (()=> {
+
+  const animatedContents = () => {
     const description = document.querySelectorAll(".about-us-desc");
     const imageBox = document.querySelector(".image-box");
     const animatedImage = document.querySelector(".animated-about-img")
@@ -90,9 +91,9 @@
         },
       });
 
-      tl.to(imageBox, { 
-        y: 0, 
-        scale:1,
+      tl.from(imageBox, { 
+        translateY: "20%", 
+        scale: 0.85,
         duration: 2 
 
       });
@@ -103,8 +104,12 @@
 
       });
     })
+  }
+  
+  onMounted (()=> {
 
+    if(window.innerWidth >= 1024 ) animatedContents();
+    
   })
-
 
 </script>
