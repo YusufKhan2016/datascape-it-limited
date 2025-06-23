@@ -5,11 +5,11 @@
 
   <!-- about us description  -->
 
-          <div class="p-18">
+          <div class="p-4">
               <AnimatedTitle
                 firstPart = "A Glimpse of"
                 middlePart = "DatascapeIT"
-                bgImgUrl = "https://images.pexels.com/photos/7130491/pexels-photo-7130491.jpeg"
+                bgImgUrl = "https://images.unsplash.com/photo-1707301396786-d5d6621416e6?q=80&w=2072&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
               />
           </div>
 
@@ -46,10 +46,9 @@
 
 <script setup>
 
+  import { nextTick, onMounted } from 'vue';
   import AnimatedTitle from '../headings/animatedTitle.vue';
   import SplitType from 'split-type'
-
-  import { onMounted } from 'vue';
 
   import gsap from 'gsap';
   import { ScrollTrigger } from 'gsap/all';
@@ -86,11 +85,11 @@
           trigger: imageBox,
           start: "top 95%",
           end: "top 50%",
-          scrub: 2,
+          scrub: 4,
           markers:false,
         },
       });
-
+      
       tl.from(imageBox, { 
         translateY: "20%", 
         scale: 0.85,
@@ -107,6 +106,8 @@
   }
   
   onMounted (()=> {
+
+    nextTick();
 
     if(window.innerWidth >= 1024 ) animatedContents();
     

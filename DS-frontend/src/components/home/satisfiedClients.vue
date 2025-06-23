@@ -2,12 +2,14 @@
   <section>
     <div class="bg-[#141414]">
       <div class="container mx-auto py-14 px-4">
- 
-        <AnimatedTitle 
-          firstPart = "Our"
-          middlePart = "Satisfied"
-          lastPart = "Clients"
-        />
+
+        <p class="p-8">          
+          <AnimatedTitle 
+            firstPart = "Our"
+            middlePart = "Satisfied"
+            lastPart = "Clients"
+          />
+        </p>
 
         <div class="logoMove relative overflow-hidden">
           <div 
