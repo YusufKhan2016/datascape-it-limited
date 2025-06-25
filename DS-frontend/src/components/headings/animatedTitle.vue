@@ -100,3 +100,14 @@
 
 
 </script>
+
+<style scoped>
+        .glow-text {
+            text-shadow: 0 0 5px #fff,
+                /* base glow */
+                0 0 10px #0ff,
+                /* outer cyan glow */
+                0 0 20px #0ff,
+                0 0 40px #0ff;
+        }
+</style>

@@ -35,7 +35,6 @@
                                 </p>
                             </div>
                             <img :src="data.image" class="h-46" alt="">
-                            
                         </div>
                     </div>
 
@@ -66,10 +65,7 @@
                         </div>
                     </div>
 
-
-                    
                 </div>
-
 
             </div>
         </div>
@@ -77,6 +73,7 @@
 </template>
 
 <script setup>
+
 import { ref, onMounted, nextTick } from 'vue';
 
 import gsap from 'gsap';
@@ -136,7 +133,7 @@ onMounted( async() => {
         const cardDown = gsap.to(card, {
             scale: index!== cards.length-1 ? 0.90 : 1,
             duration: 2,
-            ease: "none",
+            ease: "slow(0.7,0.7,false)",
         })
 
         ScrollTrigger.create({
@@ -160,7 +157,5 @@ onMounted( async() => {
         toggleActions: "restart none none reverse"
     })
 });
-
-
 
 </script>

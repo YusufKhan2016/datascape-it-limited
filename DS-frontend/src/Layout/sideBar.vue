@@ -1,7 +1,7 @@
 <template>
 
     <div 
-    class="lg:hidden fixed  z-[900] w-full h-full bg-gradient-to-r from-black to-[#146FB5] pt-20 px-8 transform transition-transform duration-300 ease-in-out"
+    class="lg:hidden fixed z-[900] w-full h-full bg-gradient-to-r from-green-900/40 backdrop-blur-lg to-black pt-20 px-8 transform transition-transform duration-300 ease-in-out"
     :class="props.isSidebarOpen? 'translate-x-0' : 'translate-x-full'"  
     >
         <div class="flex flex-col space-y-3 text-white">
@@ -20,9 +20,9 @@
 
 <script setup>
 
-    const props = defineProps({
-        isSidebarOpen: Boolean,
-        toggleSidebar: Function
-    });
+const props = defineProps({
+    isSidebarOpen: Boolean,
+    toggleSidebar: Function
+});
 
 </script>
