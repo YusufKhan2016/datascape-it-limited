@@ -7,7 +7,7 @@ import ProductsView from '@/views/productsView.vue'
 import CareerView from '@/views/careerView.vue'
 import ContactsView from '@/views/contactsView.vue'
 // import LayoutView from '@/layout/layoutView.vue'
-import LayoutView from '@/layout/layoutView.vue'
+import LayoutView from '@/layout/layoutView.vue' 
 
 const routes = [
   {
