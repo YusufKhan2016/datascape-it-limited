@@ -39,7 +39,7 @@
             :key="index"
           >
   
-            <div class="flex flex-col items-center justify-center gap-2 p-6 bg-[#000] border-1 border-solid border-green-900 rounded-2xl hover:shadow-lg hover:shadow-green-900 transition-all duration-400 ease-in-out">
+            <div class="flex flex-col items-center justify-center gap-2 p-6 bg-[#000] border-1 border-solid border-green-900 rounded-2xl shadow-lg shadow-green-900 transition-all duration-400 ease-in-out">
 
               <div class="p-10 rounded-full bg-white flex items-center justify-center">
                 <img :src="stack.logo" class="absolute h-10" alt="">
