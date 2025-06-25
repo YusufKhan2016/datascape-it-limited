@@ -35,7 +35,7 @@
 
     const sidebarProps = reactive({
         isSidebarOpen,
-        toggleSidebar,
+        toggleSidebar, 
     })
 
 </script>
