@@ -10,19 +10,19 @@
 
                 </div>
 
-                <!-- grid section for window-screen >= 1280px  -->
+                <!-- grid section for window-screen < 1280px  -->
 
                 <div
-                    class="xl:hidden grid lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-14 sm:gap-5">
+                    class="xl:hidden py-12 grid lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-14 sm:gap-x-4 sm:gap-y-12">
 
                     <div v-for="(service, index) in services" :key="index"
-                        class="relative h-[400px] group hover:scale-103 transition-all duration-300 ease-in-out">
+                        class="relative h-[500px] sm:h-[300px] group hover:scale-103 transition-all duration-300 ease-in-out">
 
                         <img :src="service.image_link"
                             class="w-full h-full object-cover object-center blur-[3px] rounded-2xl" alt="">
 
                         <div
-                            class="inset-0 absolute z-[99] bg-black/45 rounded-4xl border-1 border-solid border-green-900">
+                            class="inset-0 absolute z-[99] bg-black/45 rounded-xl border-1 border-solid border-green-900">
                         </div>
 
                         <div
@@ -31,7 +31,7 @@
                         </div>
 
                         <div class="inset-0 absolute z-[100] top-24 left-4 md:left-6 xl:left-4">
-                            <h1 class="text-gray-50 text-xl font-bold">
+                            <h1 class="text-gray-50 text-2xl sm:text-xl font-bold">
                                 {{ service.title }}
                             </h1>
                         </div>
@@ -181,10 +181,11 @@ const servicesAnimation = () => {
 
     gsap.to(scroller, {
         transform: `translateX(-${scrollWidth - 930}px)`,
+        ease: "none",
         scrollTrigger: {
             trigger: container,
             scroller: "body",
-            start: "top 11%",
+            start: "top 15%",
             end: `top -${100 * servicesLength / 2}%`,
             scrub: true,
             pin: true,

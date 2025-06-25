@@ -2,7 +2,10 @@
     <section>
         <div class="bg-[#141414]">
             <div class="container px-4 py-14 mx-auto">
-                <div class="animated grid grid-cols-1 md:grid-cols-3">
+
+                <!-- section for screen-size >= 1280px -->
+
+                <div class="hidden xl:grid grid-cols-1 md:grid-cols-3">
 
                     <!-- heading -->
 
@@ -35,23 +38,38 @@
                             
                         </div>
                     </div>
-                    <!-- <div class="relative h-[400px] flex flex-col md:col-span-2">
-                        <div 
-                        ref="stackCards"
-                        class="flex flex-row justify-between items-center absolute p-4 rounded-2xl text-amber-50 border-1 border-solid border-green-800 bg-black"
-                        >
-                            <div class="space-y-3">
-                                <h2 class="font-semibold text-2xl">Our Innovative Excellence</h2>
-                                <p class="md:min-w-xl">
-                                    Embracing cutting-edge technologies, we strive for innovative solutions that propel our clients ahead in the digital landscape.
-                                </p>
-                            </div>
-                            <img :src="ClientCentric" class="h-46" alt="">
-                            
-                        </div>
-                    </div> -->
 
                 </div>
+
+                <!-- section for screen-size < 1280px  -->
+
+                <div class="xl:hidden">
+
+                    <p class="p-8">
+                        <AnimatedTitle 
+                            firstPart = "Why Choose"
+                            middlePart = "us?"
+                        />
+                    </p>
+
+                    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4">
+                        <div 
+                            v-for="(data, index) in datas"
+                            :key="index"
+                            class="flex flex-col-reverse rounded-xl text-amber-50    gap-5 p-4"
+                            >
+                            <div class="space-y-3 text-center">
+                                <h2 class="font-semibold text-2xl">{{ data.title }}</h2>
+                            </div>
+                            <img :src="data.image" class="m-auto h-32" alt="">
+                            
+                        </div>
+                    </div>
+
+
+                    
+                </div>
+
 
             </div>
         </div>
