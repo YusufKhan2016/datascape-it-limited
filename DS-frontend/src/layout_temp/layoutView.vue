@@ -10,7 +10,7 @@
             </div>
         </main>
 
-        <BottomBar /> 
+        <BottomBar />
 
     </div>
 </template>
