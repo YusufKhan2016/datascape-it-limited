@@ -3,8 +3,8 @@
   <HeroBanner />
   <HeroVideoBanner />
   <ServicesSingle />
-  <TechStacks />
   <WhyChooseUs />
+  <TechStacks />
   <SatisfiedClients />
   
 </template>

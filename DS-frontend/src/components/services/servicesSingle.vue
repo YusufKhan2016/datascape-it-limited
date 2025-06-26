@@ -187,7 +187,7 @@ const servicesAnimation = () => {
             scroller: "body",
             start: "top 15%",
             end: `top -${100 * servicesLength / 2}%`,
-            scrub: true,
+            scrub: 1.5,
             pin: true,
         }
     })

@@ -38,7 +38,6 @@
 
           </div>
 
-
         </div>
     </div>
   </section>
@@ -108,7 +107,6 @@
   onMounted (()=> {
 
     nextTick();
-
     if(window.innerWidth >= 1024 ) animatedContents();
     
   })
