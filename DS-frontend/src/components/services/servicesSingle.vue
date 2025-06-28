@@ -1,6 +1,6 @@
 <template>
     <section>
-        <div class="bg-[#141414]">
+        <div class="bg-[#141414] overflow-hidden">
             <div class="container px-4 pt-24 mx-auto">
 
                 <div class="px-18 py-14">
@@ -41,7 +41,7 @@
 
                 <!-- section for window-screen >= 1280px  -->
 
-                <div class="scroll-pin overflow-hidden translate-x-3 hidden xl:block">
+                <div class="scroll-pin translate-x-3 hidden xl:block">
 
                     <div class="child-scroll-pin flex space-x-5 py-12 ml-56">
                         <div v-for="(service, index) in services" :key="index"

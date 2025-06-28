@@ -1,13 +1,15 @@
 <template>
-    <header>
+    <header class="mx-auto">
 
-        <div class="w-full fixed z-[1000] transition-all duration-500 ease-in-out" 
+        <div class="w-full fixed z-[1000] transition-all duration-400 ease-in-out" 
         :class="[
             scrollDelta
             ? '-translate-y-[100%]' : 'translate-y-0',
             isScrolled
                 ? 'bg-[#111]/50 backdrop-blur-2xl' : 'bg-black'
         ]"
+        @wheel.stop = "dropDownOpen"
+        @touchmove.stop = "dropDownOpen"
         >
             <div class="container h-18 flex items-center justify-between mx-auto">
 
@@ -25,15 +27,62 @@
 
                 <div>
                     <div class="hidden lg:flex items-center font-[500] text-zinc-50 space-x-6 px-5">
-                        <router-link to="/">Home</router-link>
-                        <router-link to="about">About us</router-link>
-                        <router-link to="services">Services</router-link>
-                        <router-link to="products">Products</router-link>
-                        <router-link to="career">Career</router-link>
-                        <router-link to="contacts"
-                            class="bg-gradient-to-r rounded-3xl from-blue-900 to-green-800 px-4 py-2">
+
+                        <router-link to="/">
+                            Home
+                        </router-link>
+
+                        <router-link to=""
+                        class="flex items-center cursor-pointer"
+                        @click="handleDropDown('about')"
+                        >
+                            <p>About</p>
+                            <svg 
+                            xmlns="http://www.w3.org/2000/svg"
+                            class="transition-all duration-500"
+                            :class="!dropDownOpen || dropDownDataName !== 'about'
+                                ?'rotate-0':'rotate-180'"
+                            width="24" 
+                            height="24" viewBox="0 0 16 16"
+                            >
+                                <path fill="currentColor" fill-rule="evenodd" d="m8 10.207l3.854-3.853l-.707-.708L8 8.793L4.854 5.646l-.708.708z" clip-rule="evenodd" />
+                            </svg>
+
+                        </router-link>
+
+                        <router-link to="services" class="flex items-center">
+                            Services
+                        </router-link>
+
+                        <router-link to=""
+                        class="flex items-center cursor-pointer"
+                        @click="handleDropDown('products')"
+                        >
+
+                            <p>Products</p>
+                            <svg 
+                            xmlns="http://www.w3.org/2000/svg"
+                            class="transition-all duration-500"
+                            :class="!dropDownOpen || dropDownDataName !== 'products'
+                                ?'rotate-0':'rotate-180'"
+                            width="24" 
+                            height="24" viewBox="0 0 16 16"
+                            >
+                                <path fill="currentColor" fill-rule="evenodd" d="m8 10.207l3.854-3.853l-.707-.708L8 8.793L4.854 5.646l-.708.708z" clip-rule="evenodd" />
+                            </svg>
+
+                        </router-link>
+
+                        <router-link to="career">
+                            Career
+                        </router-link>
+
+                        <router-link 
+                        to="contacts"
+                        class="bg-gradient-to-r rounded-3xl from-blue-900 to-green-800 px-4 py-2">
                             Contact us
                         </router-link>
+
                     </div>
 
                     <!-- menu icon for responsive  -->
@@ -54,16 +103,26 @@
 
             </div>
         </div>
+
+        <!-- dropdown  -->
+
+        <NavDropdown v-bind="dropdownProps" />
+        
     </header>
 </template>
 
 <script setup>
 
+import NavDropdown from '@/components/dropdown/navDropdown.vue';
+
 import { 
-    ref, 
+    ref,
     watch, 
     onMounted, 
-    onUnmounted } from 'vue';
+    onUnmounted,
+    reactive,
+    watchEffect
+} from 'vue';
 
 const props = defineProps({
     isSidebarOpen: Boolean,
@@ -71,7 +130,6 @@ const props = defineProps({
 });
 
 const isScrolled = ref(false);
-
 const scrollDelta = ref(false);
 const lastScrollDelta = ref(0);
 
@@ -82,8 +140,20 @@ const handleScroll = () => {
     lastScrollDelta.value = currentY;
 }
 
-watch(scrollDelta, () => {
-    console.log(scrollDelta.value)
+const dropDownOpen = ref(false);
+const dropDownDataName = ref("");
+
+const handleDropDown = (e) => {
+    dropDownOpen.value = !dropDownOpen.value;
+    dropDownDataName.value = e;
+}
+
+watch(dropDownOpen, () => {
+    document.body.style.overflow = dropDownOpen.value ? 'hidden' : 'auto';
+})
+
+watchEffect(() => {
+    document.body.style.overflow = dropDownOpen.value ? 'hidden' : 'auto';
 })
 
 onMounted(() => {
@@ -92,6 +162,12 @@ onMounted(() => {
 
 onUnmounted(() => {
     window.removeEventListener("scroll", handleScroll);
+})
+
+const dropdownProps = reactive({
+    dropDownOpen,
+    dropDownDataName,
+    handleDropDown,
 })
 
 </script>

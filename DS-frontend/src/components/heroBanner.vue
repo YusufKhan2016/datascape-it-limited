@@ -9,7 +9,12 @@
             </div>
             <div class="absolute z-[20] animate-pulse bg-green-400 h-40 w-2/4 blur-[230px]"></div>
         
-            <video autoplay muted loop playsinline class="absolute top-0 left-0 w-full h-full object-cover z-0">
+            <video 
+            autoplay 
+            muted 
+            loop 
+            playsinline 
+            class="absolute top-0 left-0 w-full h-full object-cover z-0">
                 <source src="https://cdn.pixabay.com/video/2015/10/02/877-141149926_medium.mp4" type="video/mp4" />
                 Your browser does not support the video tag.
             </video>
