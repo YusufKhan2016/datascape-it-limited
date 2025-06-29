@@ -1,12 +1,8 @@
 @import "tailwindcss";
 
-/* main.css */
+/* Global styles */
 * {
     font-family: "Poppins", sans-serif;
-    scrollbar-width: thin;
-    /* Firefox */
-    scrollbar-color: #888 #141414;
-    /* Firefox */
 }
 
 body {
@@ -15,21 +11,39 @@ body {
     padding: 0;
 }
 
-/* Scrollbar Styles for WebKit Browsers */
+#nprogress {
+    pointer-events: none;
+}
+
+#nprogress .bar {
+    background: #00c853 !important;
+    position: fixed;
+    z-index: 9999;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    box-shadow: 0 0 10px #00c853, 0 0 5px #00c853;
+    transition: all 0.2s ease;
+}
+
+#nprogress .spinner {
+    /* Hide spinner if you're not using it */
+    display: none;
+}
+
+/* Scrollbar for WebKit-based browsers (Chrome, Edge, Safari) */
 ::-webkit-scrollbar {
-    width: 4px;
+    width: 8px;
 }
 
 ::-webkit-scrollbar-track {
-    background: #026c93;
+    /* Background of the scroll track */
+    background: #141414;
 }
 
 ::-webkit-scrollbar-thumb {
-    background-color: #4eb18a;
+    background-color: #00c853;
     border-radius: 10px;
     border: 2px solid #141414;
-}
-
-::-webkit-scrollbar-thumb:hover {
-    background-color: #09bd0f;
 }

@@ -6,7 +6,7 @@
             scrollDelta
             ? '-translate-y-[100%]' : 'translate-y-0',
             isScrolled
-                ? 'bg-[#111]/50 backdrop-blur-2xl' : 'bg-black'
+            ? 'bg-[#111]/50 backdrop-blur-2xl' : 'bg-black'
         ]"
         @wheel.stop = "dropDownOpen"
         @touchmove.stop = "dropDownOpen"
@@ -14,7 +14,7 @@
             <div class="container h-18 flex items-center justify-between mx-auto">
 
                 <div class="hidden lg:block">
-                    <router-link to="/">
+                    <router-link to="/" @click="()=> dropDownOpen = false">
                         <img class="h-12 px-4" src="@/assets/datascape-it-main.png" alt="" />
                     </router-link>
                 </div>
@@ -28,13 +28,14 @@
                 <div>
                     <div class="hidden lg:flex items-center font-[500] text-zinc-50 space-x-6 px-5">
 
-                        <router-link to="/">
+                        <router-link to="/" @click="()=> dropDownOpen = false">
                             Home
                         </router-link>
 
-                        <router-link to=""
+                        <router-link 
+                        to=""
+                        @click="handleDropDown('about', aboutDropdownImg)"
                         class="flex items-center cursor-pointer"
-                        @click="handleDropDown('about')"
                         >
                             <p>About</p>
                             <svg 
@@ -50,13 +51,14 @@
 
                         </router-link>
 
-                        <router-link to="services" class="flex items-center">
+                        <router-link to="services" @click="()=> dropDownOpen = false">
                             Services
                         </router-link>
 
-                        <router-link to=""
+                        <router-link 
+                        to=""
+                        @click="handleDropDown('products', productDropdownImg)"
                         class="flex items-center cursor-pointer"
-                        @click="handleDropDown('products')"
                         >
 
                             <p>Products</p>
@@ -73,12 +75,15 @@
 
                         </router-link>
 
-                        <router-link to="career">
+                        <router-link 
+                        to="career" 
+                        @click="()=> dropDownOpen = false">
                             Career
                         </router-link>
 
                         <router-link 
                         to="contacts"
+                        @click="()=> dropDownOpen = false"
                         class="bg-gradient-to-r rounded-3xl from-blue-900 to-green-800 px-4 py-2">
                             Contact us
                         </router-link>
@@ -115,6 +120,9 @@
 
 import NavDropdown from '@/components/dropdown/navDropdown.vue';
 
+import productDropdownImg from '@/assets/dropdown/products.jpg'
+import aboutDropdownImg from '@/assets/dropdown/about.jpg'
+
 import { 
     ref,
     watch, 
@@ -134,17 +142,19 @@ const lastScrollDelta = ref(0);
 
 const handleScroll = () => {
     const currentY = window.scrollY
-    isScrolled.value = currentY > 10;
+    isScrolled.value = currentY > 300;
     scrollDelta.value = currentY - lastScrollDelta.value > 0 ? true : false;
     lastScrollDelta.value = currentY;
 }
 
 const dropDownOpen = ref(false);
 const dropDownDataName = ref("");
+const imgPath = ref("");
 
-const handleDropDown = (e) => {
+const handleDropDown = (name, img) => {
     dropDownOpen.value = !dropDownOpen.value;
-    dropDownDataName.value = e;
+    dropDownDataName.value = name;
+    imgPath.value = img;
 }
 
 watch(dropDownOpen, () => {
@@ -163,6 +173,7 @@ const dropdownProps = reactive({
     dropDownOpen,
     dropDownDataName,
     handleDropDown,
+    imgPath,
 })
 
 </script>

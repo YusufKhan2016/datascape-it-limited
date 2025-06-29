@@ -3,6 +3,7 @@
 </template>
 
 <script setup>
+
 import { onMounted, onUnmounted } from 'vue'
 import Lenis from 'lenis'
 
@@ -12,7 +13,7 @@ onMounted(() => {
   lenis = new Lenis({
     duration: 2,
     easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
-    smooth: true
+    smooth: true,
   })
 
   const raf = (time) => {
@@ -26,4 +27,5 @@ onMounted(() => {
 onUnmounted(() => {
   lenis.destroy()
 })
+
 </script>

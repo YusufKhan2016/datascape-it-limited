@@ -1,8 +1,9 @@
 <template>
-  <div>
-  </div>
+
+  <MdMessage />
+
 </template>
 
 <script setup>
-
+import MdMessage from '@/components/about/mdMessage.vue';
 </script>

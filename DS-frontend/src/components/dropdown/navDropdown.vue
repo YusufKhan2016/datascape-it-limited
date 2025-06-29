@@ -6,7 +6,9 @@
     @touchmove.stop
     >   
     
-        <img src="https://images.pexels.com/photos/7534168/pexels-photo-7534168.jpeg" class="inset-0 absolute z-0 h-full w-full">
+        <img 
+        :src="props.imgPath"
+        class="inset-0 absolute z-0 h-full">
         <div class="absolute inset-0 z-10 h-full w-full bg-gradient-to-r from-transparent via-[#141414] to-green-950"></div>
 
         <div class="container relative z-20 flex justify-end items-center px-4 mx-auto ">
@@ -39,12 +41,11 @@
 <script setup>
 import { ref, computed, watch } from 'vue';
 import gsap from "gsap";
-import { onMounted } from 'vue';
-import { nextTick } from 'vue';
 
 const props = defineProps({
     dropDownOpen: Boolean,
     dropDownDataName: String,
+    imgPath: String,
     handleDropDown: Function,
 })
 
@@ -89,11 +90,8 @@ const animateLinks = (show) => {
 };
 
 // Watch dropdown changes 
-onMounted(async () => {
-    await nextTick();
-    watch(() => props.dropDownOpen, () => animateLinks(props.dropDownOpen));
-    watch(datas, () => props.dropDownOpen && animateLinks(true));
-}),
+watch(() => props.dropDownOpen, () => animateLinks(props.dropDownOpen));
+watch(datas, () => props.dropDownOpen && animateLinks(true));
 
 </script>
 

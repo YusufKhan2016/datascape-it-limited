@@ -1,4 +1,5 @@
 import { createRouter, createWebHistory } from 'vue-router'
+import nProgress from 'nprogress'
 
 import HomeView from '@/views/homeView.vue'
 import AboutUsView from '@/views/aboutUsView.vue'
@@ -56,10 +57,22 @@ const routes = [
 ]
 
 const router = createRouter({
-
   history: createWebHistory(),
   routes,
-  
+})
+
+nProgress.configure({
+  showSpinner: false,
+  speed: 800,
+})
+
+router.beforeEach((to, from, next) => {
+  nProgress.start()
+  next()
+})
+
+router.afterEach(() => {
+  nProgress.done()
 })
 
 
