@@ -62,8 +62,6 @@
     description.forEach((char)=> {
 
       const characters = new SplitType(char, {types: 'lines'});
-      
-      console.log(characters)
 
       gsap.from(characters.lines, {
 

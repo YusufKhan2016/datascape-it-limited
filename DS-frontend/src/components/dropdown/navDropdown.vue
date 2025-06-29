@@ -1,6 +1,6 @@
 <template>
     <div 
-    class="fixed h-full w-full z-[999] bg-black flex items-center text-amber-50 pt-17 transition-all duration-500 rounded-4xl border-1 boder-solid border-green-800 shadow-md shadow-green-900 overflow-hidden"
+    class="fixed h-full w-full z-[999] bg-black flex items-center text-amber-50 pt-17 transition-all duration-300 rounded-4xl border-1 boder-solid border-green-800 shadow-md shadow-green-900 overflow-hidden"
     :class="!props.dropDownOpen? '-translate-y-[150%]':'-translate-y-3'"
     @wheel.stop
     @touchmove.stop
@@ -12,6 +12,7 @@
         <div class="container relative z-20 flex justify-end items-center px-4 mx-auto ">
             <div 
             class="flex flex-col items-start gap-3 text-3xl h-full max-h-[calc(100vh-200px)] overflow-y-auto overflow-x-hidden scrollbar-track-transparent custom-scrollbar"
+            ref="linksContainer"
             >
 
                 <router-link 
@@ -19,9 +20,11 @@
                     @click="props.handleDropDown"
                     :key="index"
                     :to="page.link"
-                    class="relative hover:px-2 py-2 mr-12 transition-all duration-300 text-amber-50 overflow-hidden group w-full flex-shrink-0"
+                    class="relative hover:px-2 py-2 mr-12 transition-all duration-300 text-amber-50 overflow-hidden group w-full flex-shrink-0 page-link"
+                    :data-index="index"
                 >
-                    <span class="relative z-10 group-hover:text-black transition-colors duration-600">
+                    <span
+                    class="relative z-10 inline-block group-hover:text-black transition-colors duration-300 page-name">
                         {{ page.name }}
                     </span>
                     <span class="absolute inset-0 bg-amber-50 transition-all duration-300 transform -translate-x-full group-hover:translate-x-0"></span>
@@ -34,8 +37,8 @@
 </template>
 
 <script setup>
-
-import { ref, watch, computed } from 'vue';
+import { ref, computed, watch } from 'vue';
+import gsap from "gsap";
 
 const props = defineProps({
     dropDownOpen: Boolean,
@@ -60,17 +63,36 @@ const products = ref([
 const datas = computed(() => {
     if (props.dropDownDataName === 'about') return about;
     else if (props.dropDownDataName === 'products') return products;
+    else if (!props.dropDownDataName || props.dropDownDataName === null) return []
     return [];
 })
 
-watch(datas,() => {
-    console.log(datas.value)
-})
+const linksContainer = ref(null);
+
+// animation function
+const animateLinks = (show) => {
+    const links = linksContainer.value?.querySelectorAll('.page-link');
+    if (!links) return;
+
+    gsap.fromTo(links, 
+        { opacity: 0, x: 30 },
+        { 
+            opacity: show ? 1 : 0, 
+            x: show ? 0 : 30, 
+            duration: 0.5,
+            stagger: 0.1,
+            ease: "power2.out"
+        }
+    );
+};
+
+// Watch dropdown changes 
+watch(() => props.dropDownOpen, () => animateLinks(props.dropDownOpen));
+watch(datas, () => props.dropDownOpen && animateLinks(true));
 
 </script>
 
 <style scoped>
-
 .custom-scrollbar::-webkit-scrollbar {
     width: 4px;
 }
@@ -84,9 +106,7 @@ watch(datas,() => {
     border-radius: 10px;
 }
 
-/* Ensure smooth scrolling */
 .custom-scrollbar {
     scroll-behavior: smooth;
 }
-
 </style>

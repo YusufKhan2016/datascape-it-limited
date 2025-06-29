@@ -28,75 +28,75 @@
 
 <script setup>
 
-    import { ref, onMounted, nextTick } from "vue";
+import { ref, onMounted, nextTick } from "vue";
 
-    import gsap from "gsap";
-    import { ScrollTrigger } from "gsap/all";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/all";
 
-    import SplitType from "split-type";
+import SplitType from "split-type";
 
-    gsap.registerPlugin(ScrollTrigger)
-    
-    const heading = ref(null);
-    const middle = ref(null);
+gsap.registerPlugin(ScrollTrigger)
 
-    const titleAnimation = () => {
+const heading = ref(null);
+const middle = ref(null);
 
-        if(window.innerWidth >= 1024 && middle.value) {
-            
-            const splittedText = new SplitType(middle.value, {types: "chars"} )
-    
-            gsap.from(splittedText.chars, {
+const titleAnimation = () => {
+
+    if(window.innerWidth >= 1024 && middle.value) {
         
-                y:100,
-                opacity:0,
-                delay: 0.3,
-                duration:0.8,
-                // ease: "back.out",
-                stagger: {
-                    from: "center",
-                    amount: -0.4,
-                },
-                scrollTrigger:heading.value 
-        
-            })
+        const splittedText = new SplitType(middle.value, {types: "chars"} )
+
+        gsap.from(splittedText.chars, {
     
-        }
+            y:100,
+            opacity:0,
+            delay: 0.3,
+            duration:0.8,
+            // ease: "back.out",
+            stagger: {
+                from: "center",
+                amount: -0.4,
+            },
+            scrollTrigger:heading.value 
+    
+        })
 
     }
 
-    onMounted( async() => {
+}
 
-    // animation for heading
-        await nextTick();
-        titleAnimation();
+onMounted( async() => {
+
+// animation for heading
+    await nextTick();
+    titleAnimation();
+
+})
+
+defineProps({
+
+    firstPart: {
+        type: String,
+    },
+    middlePart: {
+        type:String,
+    },
+    lastPart: {
+        type:String,
+    },
+    bgImgUrl: {
+        type:String,
+        default: 'https://images.unsplash.com/photo-1707301396786-d5d6621416e6',
+    },
+    middleTextColor: {
+        type: String,
+        default: "text-amber-50",
+    },
+    extraClass: {
+        type: String,
+    }
     
-    })
-
-    defineProps({
-
-        firstPart: {
-            type: String,
-        },
-        middlePart: {
-            type:String,
-        },
-        lastPart: {
-            type:String,
-        },
-        bgImgUrl: {
-            type:String,
-            default: 'https://images.unsplash.com/photo-1707301396786-d5d6621416e6',
-        },
-        middleTextColor: {
-            type: String,
-            default: "text-amber-50",
-        },
-        extraClass: {
-            type: String,
-        }
-        
-    })
+})
 
 
 </script>

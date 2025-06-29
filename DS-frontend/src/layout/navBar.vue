@@ -121,7 +121,6 @@ import {
     onMounted, 
     onUnmounted,
     reactive,
-    watchEffect
 } from 'vue';
 
 const props = defineProps({
@@ -149,10 +148,6 @@ const handleDropDown = (e) => {
 }
 
 watch(dropDownOpen, () => {
-    document.body.style.overflow = dropDownOpen.value ? 'hidden' : 'auto';
-})
-
-watchEffect(() => {
     document.body.style.overflow = dropDownOpen.value ? 'hidden' : 'auto';
 })
 
