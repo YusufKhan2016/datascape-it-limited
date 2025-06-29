@@ -39,6 +39,8 @@
 <script setup>
 import { ref, computed, watch } from 'vue';
 import gsap from "gsap";
+import { onMounted } from 'vue';
+import { nextTick } from 'vue';
 
 const props = defineProps({
     dropDownOpen: Boolean,
@@ -87,8 +89,11 @@ const animateLinks = (show) => {
 };
 
 // Watch dropdown changes 
-watch(() => props.dropDownOpen, () => animateLinks(props.dropDownOpen));
-watch(datas, () => props.dropDownOpen && animateLinks(true));
+onMounted(async () => {
+    await nextTick();
+    watch(() => props.dropDownOpen, () => animateLinks(props.dropDownOpen));
+    watch(datas, () => props.dropDownOpen && animateLinks(true));
+}),
 
 </script>
 
