@@ -32,7 +32,7 @@
 
 <!-- about us image section   -->
 
-          <div class="image-box w-9/10 h-auto bg-white overflow-hidden flex items-center justify-center mx-auto rounded-4xl">
+          <div class="image-box w-9/10 h-auto bg-white overflow-hidden flex items-center justify-center mx-auto rounded-2xl">
 
             <img src="@/assets/about/datascape-family.jpg" class="animated-about-img transform w-full" alt="">
 

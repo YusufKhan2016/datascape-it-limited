@@ -4,7 +4,7 @@
     <!-- bg color: #141414  -->
     <div class="w-full bg-gradient-to-b from-[#000603] bg-[#141414]">
       <div class="bannerSliderScroll w-full overflow-hidden container px-2 sm:px-5 relative left-1/2 -translate-x-1/2" >
-          <div class="rounded-[50px] border border-solid border-green-600 overflow-hidden ">
+          <div class="rounded-2xl border border-solid border-green-600 overflow-hidden ">
     
             <Swiper 
               class="mySwiper"
