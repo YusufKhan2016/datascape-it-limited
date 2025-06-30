@@ -9,7 +9,7 @@
             <Swiper 
               class="mySwiper"
               :loop="true"
-              :autoplay="{ delay: 3000, disableOnInteraction: false }"
+              :autoplay="{ delay: 10000, disableOnInteraction: false }"
               :modules="[Autoplay]"
             >
   
@@ -58,7 +58,7 @@
 
     {
       title: "Let's build together",
-      image_link: "https://videos.pexels.com/video-files/4709300/4709300-uhd_2732_1440_25fps.mp4"
+      image_link: "https://videos.pexels.com/video-files/3934293/3934293-uhd_2560_1440_30fps.mp4"
     },
     {
       title: "Empowering your business",

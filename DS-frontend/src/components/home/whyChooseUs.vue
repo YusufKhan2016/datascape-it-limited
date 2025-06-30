@@ -26,7 +26,7 @@
                         v-for="(data, index) in datas"
                         :key="index"
                         :ref="el=> stackCards[index] = el"
-                        class="flex flex-row gap-6 justify-between items-center p-4 my-2 rounded-2xl text-amber-50 border-1 border-solid border-green-800 bg-black shadow-lg shadow-green-900"
+                        class="flex flex-row gap-6 justify-between items-center p-6 my-2 rounded-2xl text-amber-50 border-1 border-solid border-green-800 bg-black shadow-lg shadow-green-900"
                         >
                             <div class="space-y-3">
                                 <h2 class="font-semibold text-2xl">{{ data.title }}</h2>
@@ -34,7 +34,7 @@
                                     {{ data.Description }}
                                 </p>
                             </div>
-                            <img :src="data.image" class="h-46" alt="">
+                            <img :src="data.image" class="h-40" alt="">
                         </div>
                     </div>
 
@@ -105,7 +105,7 @@ const datas = [
     },
     {
         title: "Collaborative Synergy",
-        Description: "Fostering a culture of collaboration, we believe in the collective strength of our team, working seamlessly together to achieve outstanding results for our clients. Our approach emphasizes open communication, mutual respect, and shared goals, creating an environment where innovative ideas can flourish. By leveraging diverse perspectives and expertise, we harness the power of synergy to deliver exceptional outcomes. Our team’s dedication to collaboration ensures that we consistently deliver high-quality solutions, tailored to meet the unique needs of each client. We are committed to building strong, long-lasting partnerships that thrive on trust, cooperation, and a shared vision for success.",
+        Description: "We foster a collaborative culture built on trust and shared goals, empowering our team to deliver innovative solutions and build lasting partnerships that drive exceptional results.",
         image: Synergy,
     },
     
