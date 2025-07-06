@@ -1,29 +1,29 @@
 <template>
-  <div>
-    <h1 
-    ref="heading"
-    :class="`flex flex-wrap justify-center overflow-hidden text-3xl sm:text-3xl/snug md:text-4xl/snug xl:text-6xl/snug font-light ${extraClass}`">
-    
-        <span 
-        :class="`text-transparent bg-cover bg-left bg-clip-text`"
-        :style="`background-image: url(${bgImgUrl})`"
-        > 
-            {{ firstPart }}&nbsp;
-        </span>
-        <span 
-        ref="middle"
-        :class="`${middleTextColor}`" > 
-            {{ middlePart }}&nbsp;
-        </span> 
-        <span 
-        :class="`text-transparent bg-cover bg-right bg-clip-text`"
-        :style="`background-image: url(${bgImgUrl})`"
-        >
-            &nbsp;{{ lastPart }}
-        </span>
+    <div>
+        <h1 
+        ref="heading"
+        :class="`flex flex-wrap justify-center overflow-hidden text-3xl sm:text-3xl/snug md:text-4xl/snug xl:text-6xl/snug font-light ${extraClass}`">
         
-    </h1>
-  </div>
+            <span 
+            :class="`text-transparent bg-cover bg-left bg-clip-text`"
+            :style="`background-image: url(${bgImgUrl})`"
+            > 
+                {{ firstPart }}&nbsp;
+            </span>
+            <span 
+            ref="middle"
+            :class="`${middleTextColor}`" > 
+                {{ middlePart }}&nbsp;
+            </span> 
+            <span 
+            :class="`text-transparent bg-cover bg-right bg-clip-text`"
+            :style="`background-image: url(${bgImgUrl})`"
+            >
+                &nbsp;{{ lastPart }}
+            </span>
+            
+        </h1>
+    </div>
 </template>
 
 <script setup>
