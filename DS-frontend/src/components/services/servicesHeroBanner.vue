@@ -1,7 +1,7 @@
 <template>
     <section>
         <div class="relative">
-            <div class="container mx-auto px-4 pt-4 pb-12 relative z-[999]">
+            <div class="container mx-auto px-4 pt-4 pb-12 relative z-[500]">
                 <div class="flex justify-between items-center">
                     <div class="relative w-4/10">
                         <div class="w-[334px] h-[429px] overflow-hidden rounded-2xl">
@@ -18,7 +18,7 @@
                     </div>
                 </div>
             </div>
-            <div class="absolute inset-0 z-[20] bg-gradient-to-b from-black via-transparent to-[#141414]"></div>
+            <div class="absolute inset-0 w-full h-full object-cover z-[20] backdrop-blur-[2px] bg-gradient-to-b from-black via-transparent to-[#141414]"></div>
             <video 
             autoplay 
             muted 

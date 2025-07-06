@@ -50,7 +50,7 @@
                             </div>
 
                             <div
-                                class="absolute z-[100] left-4 top-4 bg-gradient-to-r from-[#437ABC] to-green-600  p-4 rounded-full">
+                                class="absolute z-[100] left-4 top-4 bg-gradient-to-r from-blue-800 to-green-800  p-4 rounded-full">
                                 <img class="h-8" :src="service.icon" alt="">
                             </div>
 
