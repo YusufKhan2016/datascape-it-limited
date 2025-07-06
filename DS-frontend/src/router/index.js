@@ -5,6 +5,7 @@ import HomeView from '@/views/homeView.vue'
 import AboutUsView from '@/views/aboutUsView.vue'
 import MdMessageView from '@/views/mdMessageView.vue'
 import ServicesView from '@/views/servicesView.vue'
+import ServicesDetailsView from '@/views/servicesDetailsView.vue'
 import ProductsView from '@/views/productsView.vue'
 import CareerView from '@/views/careerView.vue'
 import ContactsView from '@/views/contactsView.vue'
@@ -35,6 +36,11 @@ const routes = [
         path: 'services',
         name: 'services',
         component: ServicesView,
+      },
+      {
+        path: 'services-details',
+        name: 'services-details',
+        component: ServicesDetailsView,
       },
       {
         path: 'products',

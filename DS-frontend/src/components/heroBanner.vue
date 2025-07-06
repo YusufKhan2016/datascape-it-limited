@@ -7,6 +7,7 @@
                 <h3 class="lg:w-[450px] w-[365px] text-lg text-white/90 text-center font-light">We help startups and enterprises unlock growth with scalable, modern tech solutions.</h3>
                 
             </div>
+            
             <div class="absolute z-[20] animate-pulse bg-green-400 h-40 w-2/4 blur-[230px]"></div>
         
             <video 

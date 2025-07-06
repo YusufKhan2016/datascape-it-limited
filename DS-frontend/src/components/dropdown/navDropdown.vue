@@ -54,18 +54,18 @@ const about = ref([
     { name: "Message From MD", link: "md-message" },
 ])
 
-const products = ref([
-    {name: "Digital Marketing Solutions",link: "#",}, 
-    {name: "Erp Software Solutions",link: "#",},
-    {name: "Sales & Inventory Management",link: "#",},
-    {name: "Human Resources Management",link: "#",},
-    {name: "Customer Relationship Management",link: "#",},
-    {name: "School Management System",link: "#",}
-])
+// const products = ref([
+//     {name: "Digital Marketing Solutions",link: "#",}, 
+//     {name: "Erp Software Solutions",link: "#",},
+//     {name: "Sales & Inventory Management",link: "#",},
+//     {name: "Human Resources Management",link: "#",},
+//     {name: "Customer Relationship Management",link: "#",},
+//     {name: "School Management System",link: "#",}
+// ])
 
 const datas = computed(() => {
     if (props.dropDownDataName === 'about') return about;
-    else if (props.dropDownDataName === 'products') return products;
+    // else if (props.dropDownDataName === 'products') return products;
     else if (!props.dropDownDataName || props.dropDownDataName === null) return []
     return [];
 })

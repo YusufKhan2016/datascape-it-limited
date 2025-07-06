@@ -142,7 +142,7 @@ onMounted( async() => {
             end: () => lastCardST.start,
             pin: true,
             animation: cardDown,
-            scrub:2,
+            scrub: true,
             toggleActions: "restart none none reverse"
         })
     })

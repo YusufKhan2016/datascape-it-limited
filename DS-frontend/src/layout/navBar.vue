@@ -56,23 +56,10 @@
                         </router-link>
 
                         <router-link 
-                        to=""
-                        @click="handleDropDown('products', productDropdownImg)"
+                        to="/products"
                         class="flex items-center cursor-pointer"
-                        >
-
-                            <p>Products</p>
-                            <svg 
-                            xmlns="http://www.w3.org/2000/svg"
-                            class="transition-all duration-500"
-                            :class="!dropDownOpen || dropDownDataName !== 'products'
-                                ?'rotate-0':'rotate-180'"
-                            width="24" 
-                            height="24" viewBox="0 0 16 16"
-                            >
-                                <path fill="currentColor" fill-rule="evenodd" d="m8 10.207l3.854-3.853l-.707-.708L8 8.793L4.854 5.646l-.708.708z" clip-rule="evenodd" />
-                            </svg>
-
+                        @click="()=> dropDownOpen = false">
+                            Products
                         </router-link>
 
                         <router-link 
@@ -120,7 +107,6 @@
 
 import NavDropdown from '@/components/dropdown/navDropdown.vue';
 
-import productDropdownImg from '@/assets/dropdown/products.jpg'
 import aboutDropdownImg from '@/assets/dropdown/about.jpg'
 
 import { 
