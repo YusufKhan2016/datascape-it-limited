@@ -6,6 +6,7 @@
   <WhyChooseUs />
   <TechStacks />
   <SatisfiedClients />
+  <MissionVission />
   
 </template>
 
@@ -15,8 +16,9 @@
   import HeroVideoBanner from '@/components/heroVideoBanner.vue';
   import SatisfiedClients from '@/components/home/satisfiedClients.vue';
   import WhyChooseUs from '@/components/home/whyChooseUs.vue';
-
+  
   import ServicesSingle from '@/components/services/servicesSingle.vue';
   import TechStacks from '@/components/services/techStacks.vue';
+  import MissionVission from '@/components/home/missionVission.vue';
 
 </script>

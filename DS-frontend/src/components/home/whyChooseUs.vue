@@ -55,7 +55,7 @@
                         <div 
                             v-for="(data, index) in datas"
                             :key="index"
-                            class="flex flex-col-reverse rounded-xl text-amber-50    gap-5 p-4"
+                            class="flex flex-col-reverse rounded-xl text-amber-50 gap-5 p-4"
                             >
                             <div class="space-y-3 text-center">
                                 <h2 class="font-semibold text-2xl">{{ data.title }}</h2>

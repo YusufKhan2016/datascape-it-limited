@@ -2,7 +2,7 @@
     <div>
         <h1 
         ref="heading"
-        :class="`flex flex-wrap justify-center overflow-hidden text-3xl sm:text-3xl/snug md:text-4xl/snug xl:text-6xl/snug font-light ${extraClass}`">
+        :class="`flex flex-wrap justify-center overflow-hidden text-4xl sm:text-5xl/snug xl:text-6xl/snug font-light ${extraClass}`">
         
             <span 
             :class="`text-transparent bg-cover bg-left bg-clip-text`"

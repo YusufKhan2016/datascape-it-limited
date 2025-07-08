@@ -20,20 +20,20 @@
                     </div>
 
                     <div 
-                    class="w-6/10 flex flex-wrap justify-end"
+                    class="w-6/10 flex flex-wrap justify-end gap-6"
                     ref="headingText">
                         
-                        <h1 class="uppercase text-6xl/19  text-amber-50 font-semibold w-[50vw]">                            
+                        <h1 class="uppercase text-6xl/19  text-amber-50 font-semibold w-[60vw] text-end">                            
                             <span
                             ref="bannerText"
                             class="block"
-                            >Transforming ideas</span>  into
-                            <span class="bg-green-500 text-black rounded-lg px-2">
-                                digital
+                            >Transforming ideas</span> 
+                            <span class="text-transparent rounded-lg pl-3 mr-2" style="-webkit-text-stroke: 1px white;">
+                                into digital
                             </span> 
-                            <span class="xl:block xl:ml-18">realities</span>
+                            realities
                         </h1>
-                        <p class="text-zinc-50 w-[40vw] text-justify">Providing innovative solutions in branding, marketing, design, and advertising. These agencies often collaborate with clients to develop unique campaigns, visual identities, and digital strategies that resonate with target audiences. Services may include graphic design, content creation, social media management.</p>
+                        <p class="text-zinc-50 w-[42vw] text-justify">Providing innovative solutions in branding, marketing, design, and advertising. These agencies often collaborate with clients to develop unique campaigns, visual identities, and digital strategies that resonate with target audiences. Services may include graphic design, content creation, social media management.</p>
                         
                     </div>
 
@@ -69,12 +69,12 @@ let tl = gsap.timeline();
 const headingText = ref(null);
 const bannerImg = ref(null);
 
-onMounted(() => {
+const bannerAnimation = () => {
 
     tl.from(headingText.value, {
         x: 50,
         opacity: 0,
-        duration: 1,
+        duration: 0.5,
     })
 
     tl.fromTo(bannerImg.value,
@@ -85,6 +85,12 @@ onMounted(() => {
             filter: "blur(0px)", 
         }
     );
+
+}
+
+onMounted(() => {
+
+    bannerAnimation();
 
 })
 

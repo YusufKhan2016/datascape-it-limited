@@ -5,8 +5,8 @@
             ref="headingText"
             >
                 
-                <h1 class="lg:text-7xl/22 text-4xl/13 text-white px-5 md:px-20 mb-3 font-bold text-center">Empowering <span class="font-black text-transparent" style="-webkit-text-stroke: 1px white;">Digital Innovation</span> for the Future</h1>
-                <h3 class="lg:w-[450px] w-[365px] text-lg text-white/90 text-center font-light">We help startups and enterprises unlock growth with scalable, modern tech solutions.</h3>
+                <h1 class="lg:text-7xl/22 text-4xl/13 text-amber-50 px-5 md:px-20 mb-3 font-bold text-center">Empowering <span class="font-black text-transparent" style="-webkit-text-stroke: 1px white;">Digital Innovation</span> for the Future</h1>
+                <h3 class="lg:w-[450px] w-[365px] text-lg text-amber-50/90 text-center font-light">We help startups and enterprises unlock growth with scalable, modern tech solutions.</h3>
                 
             </div>
             

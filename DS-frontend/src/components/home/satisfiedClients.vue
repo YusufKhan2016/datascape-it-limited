@@ -1,7 +1,7 @@
 <template>
   <section>
     <div class="bg-[#141414]">
-      <div class="container mx-auto py-14 px-4">
+      <div class="container mx-auto py-12 px-4">
 
         <p class="p-8">          
           <AnimatedTitle 
@@ -13,7 +13,7 @@
 
         <div class="logoMove relative overflow-hidden">
           <div 
-          class="marquee-track flex gap-10 py-18 whitespace-nowrap"
+          class="marquee-track flex gap-10 py-12 whitespace-nowrap"
           >
 
             <div

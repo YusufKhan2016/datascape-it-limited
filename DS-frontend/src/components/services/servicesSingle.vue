@@ -118,35 +118,35 @@ import BaseSubtitle from '@/components/headings/baseSubtitle.vue';
 const services = [
 
     {
-        title: "Digital Marketing",
+        title: "ERP Software Solutions",
         subtitle: "We offer plan and assemble managing for you from startups to the last creation or closing creation.",
         image_link: digitalMarketingImg,
         icon: digitalMarketingIcon,
         link: "services-details",
     },
     {
-        title: "Web Design & Development",
+        title: "Custom Software Development",
         subtitle: "We offer plan and assemble managing for you from startups to the last creation or closing creation.",
         image_link: webDesignImg,
         icon: webDesignIcon,
         link: "services-details",
     },
     {
-        title: "ERP Software",
+        title: "Digital Marketing Solutions",
         subtitle: "We offer plan and assemble managing for you from startups to the last creation or closing creation.",
         image_link: erpImage,
         icon: erpIcon,
         link: "services-details",
     },
     {
-        title: "Custom Software Development",
+        title: "Website Design & Development",
         subtitle: "We offer plan and assemble managing for you from startups to the last creation or closing creation.",
         image_link: "https://flywebwp.websitelayout.net/wp-content/uploads/2023/09/service-02.jpg",
         icon: customSoftwareIcon,
         link: "services-details",
     },
     {
-        title: "Sales & Inventory Management",
+        title: "API Integration",
         subtitle: "We offer plan and assemble managing for you from startups to the last creation or closing creation.",
         image_link: salesManagementImg,
         icon: salesManagementIcon,
@@ -168,6 +168,20 @@ const services = [
     },
     {
         title: "IT Consultancy",
+        subtitle: "We offer plan and assemble managing for you from startups to the last creation or closing creation.",
+        image_link: consultancyImg,
+        icon: consultancyIcon,
+        link: "services-details",
+    },
+    {
+        title: "Training & Development",
+        subtitle: "We offer plan and assemble managing for you from startups to the last creation or closing creation.",
+        image_link: consultancyImg,
+        icon: consultancyIcon,
+        link: "services-details",
+    },
+    {
+        title: "Video Documentary",
         subtitle: "We offer plan and assemble managing for you from startups to the last creation or closing creation.",
         image_link: consultancyImg,
         icon: consultancyIcon,
