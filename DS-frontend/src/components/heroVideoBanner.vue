@@ -79,10 +79,10 @@
       ease: 'power3.inOut',
       scrollTrigger: {
         trigger: ".bannerSliderScroll",
-        markers:false,
+        markers:true,
         start: "top 90%",
-        end: "top 50%",
-        scrub: 3,
+        end: "top 15%",
+        scrub: 1,
       }
     })
 
