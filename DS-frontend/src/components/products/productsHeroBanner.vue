@@ -1,30 +1,93 @@
 <template>
     <section>
-        <div class="bg-black text-amber-50">
-            <div class="container mx-auto px-4 py-12">
-                <div class="flex flex-wrap justify-center md:justify-between items-center">
+        <div class="bg-black text-amber-50 relative overflow-hidden"> 
 
-                    <div class="space-y-4  lg:w-6/10">
-                        <h1 class="font-bold text-3xl/11 md:text-6xl/18">Powering <span class="font-black text-transparent" style="-webkit-text-stroke: 1px white;">Growth Through</span> Intelligent Software</h1>
-                        <p class="lg:text-xl">Browse Our Suite of Business-Centric Products Tailored to Your Needs</p>
+            <video 
+            autoplay 
+            loop 
+            muted 
+            playsinline 
+            :src="ProductsBannerVideo"
+            class="absolute top-0 left-0 w-full h-full object-cover z-0"></video>
+
+            <div class="absolute top-0 left-0 w-full h-full bg-gradient-to-b from-[#141414] via-transparent to-[#141414] backdrop-blur-[10px] object-cover z-3"></div>
+
+            <div class="relative z-10"> 
+                <div class="container mx-auto px-4">
+                    <div class="flex flex-wrap justify-center md:justify-between items-center py-16">
+
+                        <div 
+                        class="relative space-y-4 lg:w-6/10" 
+                        ref="headingText">
+                            <h1 class="font-bold text-3xl/11 md:text-6xl/18">
+                                Powering
+                                <span 
+                                class="font-black text-transparent" 
+                                style="-webkit-text-stroke: 1px white;">
+                                    Growth Through
+                                </span>
+                                Intelligent Software
+                            </h1>
+
+                            <p class="w-[42vw] text-justify">
+                                Smart software solutions built for modern businesses. From ERP systems to sales and
+                                inventory management tools, our products streamline operations, boost productivity, and
+                                support growth — all with user-friendly design and reliable performance.
+                            </p>
+                        </div>
+
+                        <img 
+                        :src="ProductsHeroBanner" 
+                        alt="" 
+                        class="w-96 animate-[spin_80s_linear_infinite] mx-auto"
+                        ref="bannerImg" />
+
                     </div>
-                    <video 
-                    autoplay 
-                    muted 
-                    loop 
-                    playsinline 
-                    :src="productVideo"
-                    class="w-96"
-                    ></video>
-
                 </div>
             </div>
+
         </div>
     </section>
-</template> 
+</template>
 
 <script setup>
 
-    import productVideo from '@/assets/products/video/products.mp4'
-    
+import { onMounted, ref } from 'vue';
+import gsap from 'gsap';
+import { ScrollTrigger } from 'gsap/all';
+
+import ProductsHeroBanner from '@/assets/products/images/productsHero.png';
+import ProductsBannerVideo from '@/assets/products/video/productsBannerVideo.mp4';
+
+gsap.registerPlugin(ScrollTrigger);
+let tl = gsap.timeline();
+
+const headingText = ref(null);
+const bannerImg = ref(null);
+
+const bannerAnimation = () => {
+
+    tl.from(headingText.value, {
+        x: 50,
+        opacity: 0,
+        duration: 0.5,
+    })
+
+    tl.fromTo(bannerImg.value,
+        {
+            filter: "blur(40px)"
+        },
+        {
+            filter: "blur(0px)",
+        }
+    );
+
+}
+
+onMounted(() => {
+
+    bannerAnimation();
+
+})
+
 </script>
