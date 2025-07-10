@@ -14,12 +14,12 @@
 
             <div class="relative z-10"> 
                 <div class="container mx-auto px-4">
-                    <div class="flex flex-wrap justify-center md:justify-between items-center py-16">
+                    <div class="flex flex-wrap justify-center lg:justify-between items-center py-16">
 
                         <div 
-                        class="relative space-y-4 lg:w-6/10" 
+                        class="relative w-full lg:w-6/10 flex flex-wrap lg:justify-start gap-6" 
                         ref="headingText">
-                            <h1 class="font-bold text-3xl/11 md:text-6xl/18">
+                            <h1 class="font-bold text-4xl/13 md:text-6xl/18">
                                 Powering
                                 <span 
                                 class="font-black text-transparent" 
@@ -29,7 +29,7 @@
                                 Intelligent Software
                             </h1>
 
-                            <p class="w-[42vw] text-justify">
+                            <p class="lg:w-[42vw] text-justify">
                                 Smart software solutions built for modern businesses. From ERP systems to sales and
                                 inventory management tools, our products streamline operations, boost productivity, and
                                 support growth — all with user-friendly design and reliable performance.
@@ -39,7 +39,7 @@
                         <img 
                         :src="ProductsHeroBanner" 
                         alt="" 
-                        class="w-96 animate-[spin_80s_linear_infinite] mx-auto"
+                        class="w-96 animate-[spin_80s_linear_infinite] mt-10 lg:mt-0 mx-auto"
                         ref="bannerImg" />
 
                     </div>
