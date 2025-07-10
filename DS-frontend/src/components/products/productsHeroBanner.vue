@@ -10,7 +10,7 @@
             :src="ProductsBannerVideo"
             class="absolute top-0 left-0 w-full h-full object-cover z-0"></video>
 
-            <div class="absolute top-0 left-0 w-full h-full bg-gradient-to-b from-[#141414] via-transparent to-[#141414] backdrop-blur-[10px] object-cover z-3"></div>
+            <div class="absolute top-0 left-0 w-full h-full bg-gradient-to-b from-black via-transparent to-[#141414] backdrop-blur-[10px] object-cover z-3"></div>
 
             <div class="relative z-10"> 
                 <div class="container mx-auto px-4">

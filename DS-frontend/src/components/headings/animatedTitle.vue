@@ -48,14 +48,14 @@ const titleAnimation = () => {
 
         gsap.from(splittedText.chars, {
     
-            y:100,
+            y:50,
             opacity:0,
             delay: 0.3,
             duration:0.8,
             // ease: "back.out",
             stagger: {
                 from: "center",
-                amount: -0.4,
+                amount: -0.3,
             },
             scrollTrigger:heading.value 
     
