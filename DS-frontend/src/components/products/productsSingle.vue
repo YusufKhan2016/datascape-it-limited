@@ -89,15 +89,14 @@ const titleBlurEffect = ref(null);
 const SubtitleBlurEffect = ref(null);
 const imgShapeAnime = ref(null);
 
-onMounted(() => {
+const animations = () => {
 
     titleBlurEffect.value.forEach((lines) => {
         const tl = gsap.timeline({
             scrollTrigger: {
                 trigger: lines,
-                start: "top 90%",
+                start: "top 70%",
                 end: "top 40%",
-                scrub: 1,
             }
         });
         
@@ -106,46 +105,50 @@ onMounted(() => {
         tl.from(headingLines.lines, {
             opacity: 0,
             filter: "blur(10px)",
-            duration: 0.5,
+            duration: 0.8,
             stagger: 0.1,
         })
     })
-
+    
     SubtitleBlurEffect.value.forEach((lines) => {
         const tl = gsap.timeline({
             scrollTrigger: {
                 trigger: lines,
-                start: "top 98%",
+                start: "top 70%",
                 end: "top 40%",
-                scrub: 1,
             }
         });
-
+    
         const SubheadingLines = new SplitType(lines, { types: 'lines' });
-
+    
         tl.from(SubheadingLines.lines, {
             opacity: 0,
             filter: "blur(10px)",
-            duration: 0.5,
+            duration: 0.8,
             stagger: 0.1,
         })
     })
-
+    
     imgShapeAnime.value.forEach((img) => {
         const tl = gsap.timeline({
             scrollTrigger: {
                 trigger: img,
-                start: "top 80%",
+                start: "top 70%",
                 end: "top 25%",
-                scrub: 1,
                 // markers: true,
             }
         });
-
+    
         tl.to(img, {
-            translateY: "100%"
+            translateY: "100%",
+            duration: 0.8,
         })
     })
+    
+}
+
+onMounted(() => {
+    animations();
 })
 
 </script>
