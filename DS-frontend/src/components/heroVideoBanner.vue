@@ -76,7 +76,7 @@
 
     gsap.from(bannerSliderClass.value,{
       scale: 0.80,
-      ease: 'power3.inOut',
+      ease: 'none',
       scrollTrigger: {
         trigger: ".bannerSliderScroll",
         // markers:true,
