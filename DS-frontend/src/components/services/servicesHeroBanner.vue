@@ -31,7 +31,7 @@
                             </span> 
                             realities
                         </h1>
-                        <p class="text-zinc-50 lg:w-[42vw] text-justify">Providing innovative solutions in branding, marketing, design, and advertising. These agencies often collaborate with clients to develop unique campaigns, visual identities, and digital strategies that resonate with target audiences. Services may include graphic design, content creation, social media management.</p>
+                        <p class="text-amber-50 lg:w-[42vw] text-justify">Providing innovative solutions in branding, marketing, design, and advertising. These agencies often collaborate with clients to develop unique campaigns, visual identities, and digital strategies that resonate with target audiences. Services may include graphic design, content creation, social media management.</p>
                         
                     </div>
 

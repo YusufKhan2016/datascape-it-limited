@@ -1,22 +1,23 @@
 <template>
     <section>
-        <div class="bg-[#141414] py-24">
+        <div class="bg-gradient-to-b from-[#000] to-[#141414] py-24">
             <div class="container px-4 pt-8 mx-auto">
 
                 <div class="flex justify-center items-center">
                     <h1 
-                    class="text-9xl text-amber-50 drop-shadow-[0_0_10px_#22c55e]" 
+                    class="text-7xl md:text-9xl text-amber-50 drop-shadow-[0_0_10px_#22c55e]" 
                     ref="titleBlurEffect">
                         Let's Connect
                     </h1>
                 </div>
 
-                <div class="relative -mt-8 backdrop-blur-xl flex flex-col-reverse md:flex-row items-center justify-between gap-10 border-1 border-solid border-green-600 p-10 rounded-2xl">
+                <div class="relative md:-mt-7 backdrop-blur-xl shadow-md shadow-green-600 flex flex-col-reverse md:flex-row items-center justify-between gap-10 md:border-1 border-solid border-green-600 md:p-6 lg:p-10 rounded-2xl">
+                    
                     <div class="w-full lg:w-5/10 rounded-2xl overflow-hidden">
                         <iframe 
                             class="w-full object-cover"
                             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d116800.24804613434!2d90.28321297133266!3d23.81832340000002!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755c1abc33071a7%3A0x9a625a8c69ff920c!2sDatascape%20Research%20and%20Consultancy%20Limited!5e0!3m2!1sen!2sbd!4v1752303766937!5m2!1sen!2sbd"
-                            width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                            width="600" height="450" style="border:0;" allowfullscreen="" loading="eager"
                             referrerpolicy="no-referrer-when-downgrade"></iframe>
                     </div>
 
@@ -31,7 +32,8 @@
                                 class="h-10 text-md text-[#8A887F] focus:text-amber-50 focus:placeholder:text-amber-50 outline-none border-b-1 border-solid border-b-amber-50 focus:border-b-1 focus:border-solid focus:border-b-green-600 transition-all duration-400"
                                 placeholder="Full Name">
 
-                            <input type="Email"
+                            <input 
+                                type="Email"
                                 class="h-10 text-md text-[#8A887F] focus:text-amber-50 focus:placeholder:text-amber-50 outline-none border-b-1 border-solid border-b-amber-50 focus:border-b-1 focus:border-solid focus:border-b-green-600 transition-all duration-400"
                                 placeholder="Email Address">
 
@@ -94,6 +96,7 @@
 </template>
 
 <script setup>
+
 import { onMounted, ref } from 'vue';
 import gsap from 'gsap';
 

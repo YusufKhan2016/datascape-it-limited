@@ -20,7 +20,7 @@
     
             <button  
             @click="selectCategory(stkcat)"
-            class="relative group text-white">
+            class="relative group text-white cursor-pointer">
               {{ stkcat }}
               <span 
               class="absolute left-0 -bottom-1 h-[2px] w-0 bg-gradient-to-r from-blue-700 to-green-600 transition-all duration-100 group-hover:w-full group-active:w-full"

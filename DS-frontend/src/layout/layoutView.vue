@@ -1,41 +1,39 @@
 <template>
-    <div>
-        
-        <NavBar v-bind="sidebarProps"/>
-        <Sidebar v-bind="sidebarProps" />
+    
+    <NavBar v-bind="sidebarProps"/>
+    <Sidebar v-bind="sidebarProps" />
 
-        <main>
-            <div class="pt-17">
-                <router-view />
-            </div>
-        </main>
+    <main>
+        <div class="pt-17">
+            <router-view />
+        </div>
+    </main>
 
-        <BottomBar />
+    <BottomBar />
 
-    </div>
 </template>
 
 <script setup>
 
-    import { ref, reactive, watch } from 'vue';
+import { ref, reactive, watch } from 'vue';
 
-    import NavBar from './navBar.vue';
-    import Sidebar from './sideBar.vue';
-    import BottomBar from './bottomBar.vue';
+import NavBar from './navBar.vue';
+import Sidebar from './sideBar.vue';
+import BottomBar from './bottomBar.vue';
 
-    const isSidebarOpen = ref(false);
+const isSidebarOpen = ref(false);
 
-    const toggleSidebar = () => {
-        isSidebarOpen.value = !isSidebarOpen.value;
-    }
-    
-    watch(isSidebarOpen, (newValue) => {
-        document.body.style.overflow = newValue ? 'hidden' : 'auto';
-    })
+const toggleSidebar = () => {
+    isSidebarOpen.value = !isSidebarOpen.value;
+}
 
-    const sidebarProps = reactive({
-        isSidebarOpen,
-        toggleSidebar, 
-    })
+watch(isSidebarOpen, (newValue) => {
+    document.body.style.overflow = newValue ? 'hidden' : 'auto';
+})
+
+const sidebarProps = reactive({
+    isSidebarOpen,
+    toggleSidebar, 
+})
 
 </script>

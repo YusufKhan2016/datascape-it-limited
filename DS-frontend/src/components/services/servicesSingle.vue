@@ -51,7 +51,7 @@
 
                             <div
                                 class="absolute z-[100] left-4 top-4 bg-gradient-to-r from-blue-800 to-green-600  p-4 rounded-full">
-                                <img class="h-8" :src="service.icon" alt="">
+                                <img class="h-8" :src="service.icon" :alt="service.title + ' icon'">
                             </div>
 
                             <div class="inset-0 absolute z-[100] top-[40%] left-4 md:left-6 xl:left-4">
@@ -98,11 +98,13 @@ import ScrollTrigger from 'gsap/ScrollTrigger';
 import webDesignIcon from '@/assets/services/icons/web-design.png';
 import erpIcon from '@/assets/services/icons/erp.png';
 import digitalMarketingIcon from '@/assets/services/icons/social-media.png';
-import salesManagementIcon from '@/assets/services/icons/inventory-management.png';
 import mobileAppIcon from '@/assets/services/icons/mobile-apps.png';
 import ecommerceIcon from '@/assets/services/icons/ecommerce.png';
 import consultancyIcon from '@/assets/services/icons/consultancy.png';
 import customSoftwareIcon from '@/assets/services/icons/custom-software.png';
+import trainingIcon from '@/assets/services/icons/training.png';
+import videoDocs from '@/assets/services/icons/video.png';
+import apiIntegrationIcon from '@/assets/services/icons/api-integration.png';
 
 import erpImage from '@/assets/services/images/erp.jpg';
 import digitalMarketingImg from '@/assets/services/images/digital-marketing.jpg'
@@ -120,36 +122,36 @@ const services = [
     {
         title: "ERP Software Solutions",
         subtitle: "We offer plan and assemble managing for you from startups to the last creation or closing creation.",
-        image_link: digitalMarketingImg,
-        icon: digitalMarketingIcon,
+        image_link: erpImage,
+        icon:  erpIcon,
         link: "services-details",
     },
     {
         title: "Custom Software Development",
         subtitle: "We offer plan and assemble managing for you from startups to the last creation or closing creation.",
         image_link: webDesignImg,
-        icon: webDesignIcon,
+        icon: customSoftwareIcon,
         link: "services-details",
     },
     {
         title: "Digital Marketing Solutions",
         subtitle: "We offer plan and assemble managing for you from startups to the last creation or closing creation.",
-        image_link: erpImage,
-        icon: erpIcon,
+        image_link: digitalMarketingImg,
+        icon: digitalMarketingIcon,
         link: "services-details",
     },
     {
         title: "Website Design & Development",
         subtitle: "We offer plan and assemble managing for you from startups to the last creation or closing creation.",
-        image_link: "https://flywebwp.websitelayout.net/wp-content/uploads/2023/09/service-02.jpg",
-        icon: customSoftwareIcon,
+        image_link: webDesignImg,
+        icon:  webDesignIcon,
         link: "services-details",
     },
     {
         title: "API Integration",
         subtitle: "We offer plan and assemble managing for you from startups to the last creation or closing creation.",
         image_link: salesManagementImg,
-        icon: salesManagementIcon,
+        icon: apiIntegrationIcon,
         link: "services-details",
     },
     {
@@ -177,14 +179,14 @@ const services = [
         title: "Training & Development",
         subtitle: "We offer plan and assemble managing for you from startups to the last creation or closing creation.",
         image_link: consultancyImg,
-        icon: consultancyIcon,
+        icon: trainingIcon,
         link: "services-details",
     },
     {
         title: "Video Documentary",
         subtitle: "We offer plan and assemble managing for you from startups to the last creation or closing creation.",
         image_link: consultancyImg,
-        icon: consultancyIcon,
+        icon: videoDocs,
         link: "services-details",
     },
 
