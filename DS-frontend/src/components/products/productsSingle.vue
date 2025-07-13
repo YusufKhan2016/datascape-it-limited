@@ -59,32 +59,67 @@ import BaseTitle from '../headings/baseTitle.vue';
 const datas = [
     {
         title: "Digital Marketing Solutions",
-        subtitle: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem ea placeat molestiae, reprehenderit saepe ad hic laborum cum! Qui, possimus et tenetur, molestias ipsam nisi tempore voluptatem, ducimus exercitationem velit quasi ipsa? Nesciunt ipsum magni, dolorem aliquam sit inventore dolorum.",
+        subtitle: "Digital Marketing involves promoting products or services online through channels like search engines, social media, email, and websites. It aims to reach and engage target audiences, drive traffic, and increase sales. Techniques include SEO, content marketing, and PPC advertising, leveraging data analytics to optimize performance and ROI, helping businesses enhance their online presence and grow their brand.",
         img_path: "https://images.pexels.com/photos/5011647/pexels-photo-5011647.jpeg",
     },
     {
         title: "ERP Software Solutions",
-        subtitle: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem ea placeat molestiae, reprehenderit saepe ad hic laborum cum! Qui, possimus et tenetur, molestias ipsam nisi tempore voluptatem, ducimus exercitationem velit quasi ipsa? Nesciunt ipsum magni, dolorem aliquam sit inventore dolorum.",
+        subtitle: "ERP software integrates business processes into a unified system, improving efficiency. It manages Demand Requisition & Multi-Level Approval, Seamless Purchase & Quotation Management, Real-time Inventory Updates, Production Planning & Progress Monitoring, HR & Payroll with Biometric Integration, Integrated Financial Accounting & Audit Reports, providing real-time insights. ERP systems help businesses automate processes and enhance decision-making.",
         img_path: "https://images.pexels.com/photos/5011647/pexels-photo-5011647.jpeg",
     },
     {
         title: "Sales & Inventory Management",
-        subtitle: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem ea placeat molestiae, reprehenderit saepe ad hic laborum cum! Qui, possimus et tenetur, molestias ipsam nisi tempore voluptatem, ducimus exercitationem velit quasi ipsa? Nesciunt ipsum magni, dolorem aliquam sit inventore dolorum.",
+        subtitle: "Our Sales & Inventory Management solutions streamline operations by optimizing stock levels, improving sales efficiency, and enhancing demand forecasting. By reducing stockouts and overstocking, we help you minimize losses and boost customer satisfaction, ensuring your business runs smoothly and profitably.",
         img_path: "https://images.pexels.com/photos/5011647/pexels-photo-5011647.jpeg",
     },
     {
         title: "HRM (Human Resources Management)",
-        subtitle: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem ea placeat molestiae, reprehenderit saepe ad hic laborum cum! Qui, possimus et tenetur, molestias ipsam nisi tempore voluptatem, ducimus exercitationem velit quasi ipsa? Nesciunt ipsum magni, dolorem aliquam sit inventore dolorum.",
+        subtitle: "Human Resource Management (HRM) focuses on recruiting, developing, and retaining talent while managing employee relations, performance, and benefits. It ensures organizational goals are met by aligning human capital strategies with business objectives, fostering a productive and compliant work environment.",
         img_path: "https://images.pexels.com/photos/5011647/pexels-photo-5011647.jpeg",
     },
     {
         title: "CRM (Customer Relationship Management)",
-        subtitle: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem ea placeat molestiae, reprehenderit saepe ad hic laborum cum! Qui, possimus et tenetur, molestias ipsam nisi tempore voluptatem, ducimus exercitationem velit quasi ipsa? Nesciunt ipsum magni, dolorem aliquam sit inventore dolorum.",
+        subtitle: "Customer Relationship Management (CRM) manages customer interactions, streamlining sales, marketing, and service processes. It enhances customer satisfaction, loyalty, and retention by analyzing data, improving communication, and building strong, long-term relationships to drive business growth and profitability.",
         img_path: "https://images.pexels.com/photos/5011647/pexels-photo-5011647.jpeg",
     },
     {
         title: "School Management System",
-        subtitle: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem ea placeat molestiae, reprehenderit saepe ad hic laborum cum! Qui, possimus et tenetur, molestias ipsam nisi tempore voluptatem, ducimus exercitationem velit quasi ipsa? Nesciunt ipsum magni, dolorem aliquam sit inventore dolorum.",
+        subtitle: "An Institute/School Management System streamlines administrative, academic, and financial tasks, including student enrollment, attendance, grading, and fee management. It enhances efficiency, communication, and data accuracy, supporting better decision-making and overall institutional effectiveness.",
+        img_path: "https://images.pexels.com/photos/5011647/pexels-photo-5011647.jpeg",
+    },
+    {
+        title: "Online Course/Exam Management System",
+        subtitle: "An Online Course/Exam Management System streamlines digital education through comprehensive course creation, content delivery, and assessment tools. It enables seamless student enrollment, interactive learning, automated grading, and real-time progress tracking. This system enhances accessibility, reduces administrative workload, and supports flexible learning environments while ensuring academic integrity and improved educational outcomes.",
+        img_path: "https://images.pexels.com/photos/5011647/pexels-photo-5011647.jpeg",
+    },
+    {
+        title: "POS (Point of Sale)",
+        subtitle: "A Point of Sale (POS) System streamlines retail operations by managing transactions, inventory, and customer data in real-time. It integrates payment processing, receipt generation, and analytics while enhancing checkout efficiency and reducing errors. This system supports multi-location management, enabling businesses to optimize sales performance and improve customer experience.",
+        img_path: "https://images.pexels.com/photos/5011647/pexels-photo-5011647.jpeg",
+    },
+    {
+        title: "Jewellery Management System",
+        subtitle: "A Jewellery Management System specializes in managing precious metals, gemstones, and ornament inventory with precision tracking of weight, purity, and valuation. It handles customer orders, repair services, and pricing based on current market rates. By maintaining accurate product catalogs and comprehensive reporting, this system ensures precise inventory control and enhanced customer service in the jewellery business.",
+        img_path: "https://images.pexels.com/photos/5011647/pexels-photo-5011647.jpeg",
+    },
+    {
+        title: "Service Management System",
+        subtitle: "A Service Management System optimizes service delivery by managing work orders, scheduling appointments, and tracking technician assignments from initiation to completion. It streamlines customer communication, automates billing processes, and maintains detailed service histories. By enhancing operational efficiency and improving response times, this system ensures quality service delivery and sustainable business growth.",
+        img_path: "https://images.pexels.com/photos/5011647/pexels-photo-5011647.jpeg",
+    },
+    {
+        title: "E-commerce Solutions",
+        subtitle: "E-commerce Solutions provide online retail platforms that enable businesses to sell products and services digitally through user-friendly websites and mobile applications. These solutions integrate product catalog management, secure payment gateways, and order processing. By enhancing customer experience through personalized recommendations, this system empowers businesses to expand their market reach and increase sales conversion.",
+        img_path: "https://images.pexels.com/photos/5011647/pexels-photo-5011647.jpeg",
+    },
+    {
+        title: "Website Design & Development",
+        subtitle: "Website Design & Development creates professional, responsive digital experiences combining aesthetic appeal with functional excellence. It encompasses custom design layouts, intuitive navigation, and mobile optimization. By delivering visually stunning websites, businesses can establish strong online presence and enhance brand credibility.",
+        img_path: "https://images.pexels.com/photos/5011647/pexels-photo-5011647.jpeg",
+    },
+    {
+        title: "Mobile App Development",
+        subtitle: "Mobile App Development creates innovative, user-friendly applications for iOS and Android platforms that deliver seamless performance and engaging user experiences. By leveraging cutting-edge technologies and user-centered design principles, mobile apps enhance customer engagement and drive business growth.",
         img_path: "https://images.pexels.com/photos/5011647/pexels-photo-5011647.jpeg",
     },
 ]
