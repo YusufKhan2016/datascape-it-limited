@@ -122,8 +122,8 @@ const animation = () => {
         let tl = gsap.timeline({
             scrollTrigger: {
                 trigger: texts,
-                start: "top 80%",
-                end: "top 40%",
+                start: "top 90%",
+                end: "top 60%",
                 scrub: 1,
                 // markers: true,
             }
