@@ -40,12 +40,6 @@ const bannerImg = ref(null);
 
 const bannerAnimation = () => {
 
-    tl.from(headingText.value, {
-        x: 50,
-        opacity: 0,
-        duration: 0.5,
-    })
-
     tl.fromTo(bannerImg.value,
         {
             filter: "blur(40px)"
@@ -54,6 +48,12 @@ const bannerAnimation = () => {
             filter: "blur(0px)",
         }
     );
+
+    tl.from(headingText.value, {
+        x: 50,
+        opacity: 0,
+        duration: 0.5,
+    })
 
 }
 
