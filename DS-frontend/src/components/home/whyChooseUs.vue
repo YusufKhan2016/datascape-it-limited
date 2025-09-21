@@ -3,69 +3,69 @@
         <div class="bg-[#141414]">
             <div class="container px-4 py-14 mx-auto">
 
-                <!-- section for screen-size >= 1280px -->
+              <!-- section for screen-size >= 1280px -->
 
-                <div class="hidden xl:grid grid-cols-1 md:grid-cols-3">
+              <div class="hidden xl:grid grid-cols-1 md:grid-cols-3">
 
-                    <!-- heading -->
+                  <!-- heading -->
 
-                    <div 
-                    class="max-w-md"
-                    ref="headingRef"
-                    >
-                        <AnimatedTitle 
-                            firstPart = "Why Choose"
-                            middlePart = "us?"
-                        />
-                    </div>
-                    
-                    <!-- content section  -->
+                  <div
+                  class="max-w-md"
+                  ref="headingRef"
+                  >
+                      <AnimatedTitle
+                          firstPart = "Why Choose"
+                          middlePart = "us?"
+                      />
+                  </div>
 
-                    <div class="flex flex-col md:col-span-2">
-                        <div 
-                        v-for="(data, index) in datas"
-                        :key="index"
-                        :ref="el=> stackCards[index] = el"
-                        class="flex flex-row gap-6 justify-between items-center p-6 my-2 rounded-2xl text-amber-50 border-1 border-solid border-green-800 bg-black shadow-lg shadow-green-900"
-                        >
-                            <div class="space-y-3">
-                                <h2 class="font-semibold text-2xl">{{ data.title }}</h2>
-                                <p class="md:min-w-xl text-justify">
-                                    {{ data.Description }}
-                                </p>
-                            </div>
-                            <img :src="data.image" class="h-40" alt="">
-                        </div>
-                    </div>
+                  <!-- content section  -->
 
-                </div>
+                  <div class="flex flex-col md:col-span-2">
+                      <div
+                      v-for="(data, index) in datas"
+                      :key="index"
+                      :ref="el=> stackCards[index] = el"
+                      class="flex flex-row gap-6 justify-between items-center p-6 my-2 rounded-2xl text-amber-50 border-1 border-solid border-green-800 bg-black shadow-lg shadow-green-900"
+                      >
+                          <div class="space-y-3">
+                              <h2 class="font-semibold text-2xl">{{ data.title }}</h2>
+                              <p class="md:min-w-xl text-justify">
+                                  {{ data.Description }}
+                              </p>
+                          </div>
+                          <img :src="data.image" class="h-40" alt="">
+                      </div>
+                  </div>
 
-                <!-- section for screen-size < 1280px  -->
+              </div>
 
-                <div class="xl:hidden">
+              <!-- section for screen-size < 1280px  -->
 
-                    <p class="p-8">
-                        <AnimatedTitle 
-                            firstPart = "Why Choose"
-                            middlePart = "us?"
-                        />
-                    </p>
+              <div class="xl:hidden">
 
-                    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4">
-                        <div 
-                            v-for="(data, index) in datas"
-                            :key="index"
-                            class="flex flex-col-reverse rounded-xl text-amber-50 gap-5 p-4"
-                            >
-                            <div class="space-y-3 text-center">
-                                <h2 class="font-semibold text-2xl">{{ data.title }}</h2>
-                            </div>
-                            <img :src="data.image" class="m-auto h-32" alt="">
-                            
-                        </div>
-                    </div>
+                  <p class="p-8">
+                      <AnimatedTitle
+                          firstPart = "Why Choose"
+                          middlePart = "us?"
+                      />
+                  </p>
 
-                </div>
+                  <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4">
+                      <div
+                          v-for="(data, index) in datas"
+                          :key="index"
+                          class="flex flex-col-reverse rounded-xl text-amber-50 gap-5 p-4"
+                          >
+                          <div class="space-y-3 text-center">
+                              <h2 class="font-semibold text-2xl">{{ data.title }}</h2>
+                          </div>
+                          <img :src="data.image" class="m-auto h-32" alt="">
+
+                      </div>
+                  </div>
+
+              </div>
 
             </div>
         </div>
@@ -108,7 +108,7 @@ const datas = [
         Description: "We foster a collaborative culture built on trust and shared goals, empowering our team to deliver innovative solutions and build lasting partnerships that drive exceptional results.",
         image: Synergy,
     },
-    
+
 ]
 
 const headingRef = ref(null)
@@ -148,12 +148,12 @@ onMounted( async() => {
     })
 
     ScrollTrigger.create({
-        trigger: cards[0], 
+        trigger: cards[0],
         start: "center center",
         endTrigger: cards[cards.length - 1],
-        end: "center center", 
-        pin: headingRef.value, 
-        pinSpacing: false, 
+        end: "center center",
+        pin: headingRef.value,
+        pinSpacing: false,
         toggleActions: "restart none none reverse"
     })
 });
